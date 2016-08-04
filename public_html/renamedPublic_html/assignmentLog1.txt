@@ -1,0 +1,27 @@
+webonise@Webonise-Desktop:~/assignmentFolder$ ls
+assignmentQuestion1.sh  demoFolder
+webonise@Webonise-Desktop:~/assignmentFolder$ ./assignmentQuestion1.sh 
+The Host Name is Webonise-Desktop
+
+OS Description: Ubuntu 14.04.1 LTS
+
+Path of Home Directory is /home/webonise
+
+What are Users Logged in:
+webonise :0           2016-08-04 14:57   ?          1557 (:0)
+webonise pts/12       2016-08-04 14:57  old         2193 (:0)
+
+Groups user beongs to are :
+webonise adm cdrom sudo dip plugdev lpadmin sambashare
+
+finding files of directory and its subdirectories are:
+./assignmentQuestion1.sh
+./demoFolder/demoFile2.xml
+./demoFolder/demoFile1.log
+./demoFolder/demoFile3.log
+webonise@Webonise-Desktop:~/assignmentFolder$ ls demoFolder/
+demoFile1.log  demoFile2.xml  demoFile3.log
+webonise@Webonise-Desktop:~/assignmentFolder$ date
+Thu Aug  4 09:33:05 IST 2016
+webonise@Webonise-Desktop:~/assignmentFolder$ 
+
