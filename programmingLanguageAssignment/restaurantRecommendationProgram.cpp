@@ -8,32 +8,44 @@
 #include<utility> 
 using namespace std;
 
+std::string::size_type sz;
+float funct(vector<vector<string> > singleMenu,vector<string> itemList){
+    float min_value=0;
+	int flag;
+     vector<string> singleRow;
+     for(int i=0;i<singleMenu.size();i++){
+	flag=0;	
+	singleRow = singleMenu[i];
+	for(int j=2;j<singleRow.size();j++){
+		
+		for(int k=0;k<itemList.size();k++){
+                      
+			if(itemList[k] !="found"){
 
-int funct(vector<vector<string> > singleMenu,vector<string> itemList){
-   int min_value=0;
-   int len = singleMenu.size();
-   int n=itemList.size();
-   int count = itemList.size();
-    vector<string> singleRow;
-   for(int i=0;i<n;i++){
-       for(int j=0;j<len;j++){
-       	singleRow=singleMenu[j];
-           for(int k=2;k<singleRow.size();k++){
-                if(singleRow[k] == itemList[i])
-                {   i++;
-                	 v = singleRow[1];
-                	min_value +=atoi(v);
-                	break;
-                	
-                }
-           }
+				if(singleRow[j] == " "+itemList[k]){
+					flag=1;
+ 					itemList[k]="found"; 
+				//	cout<<"check";
+					break;
 
-       }
-
-      }
-      return min_value;
+												
+				}
+				
+			}
+		}	
+	}
+		
+     	if(flag==1){
+		min_value += atof(singleRow[1].c_str());
+	}		
+      } 
+    
+  for(int i=0;i<itemList.size();i++){
+   if(itemList[i] !="found")
+	return 0;
    }
-
+   
+  
   return min_value;
 }
 
@@ -45,20 +57,21 @@ int main(int argc, char *argv[]){
    }
    vector<string> itemList;
    itemList.clear();
-   int itemCount = argc-2;
-   while(itemCount){
+   int itemCount = 2;
+   while(itemCount<argc){
         itemList.push_back(argv[itemCount]);
-        itemCount--;
+        itemCount++;
    }
    
+
    vector<string> row;
    string line;
    ifstream csvFile(argv[1]);
    string word;
    
 
-   vector<vector<string> > menuResturantById;   
-   menuResturantById.clear();
+   vector<vector<string> > menuResturant;   
+   menuResturant.clear();
     while(csvFile){
         getline(csvFile,line);
         stringstream lineStream(line);
@@ -68,24 +81,28 @@ int main(int argc, char *argv[]){
             row.push_back(word);
 
          
-         menuResturantById.push_back(row);
+         menuResturant.push_back(row);
          
     }
-    vector<pair<string,string> > Result;
+ 
+     
+    vector<pair<string,float> > Result;
     vector<vector<string> > singleMenu;
     vector<string> singleRow;
-    singleRow=menuResturantById[0];
+    singleRow=menuResturant[0];
     singleMenu.clear();
-    int min_value=0;
+    float min_value=0;
     string key=singleRow[0];
-    for(int i=0;i<menuResturantById.size();i++){
-       singleRow=menuResturantById[i];
+    for(int i=0;i<menuResturant.size();i++){
+       singleRow=menuResturant[i];
+
         if(key != singleRow[0])
-        {
-        	min_value=funct(singleMenu,itemList);
-            if(min_vlaue !=0){
-            	pair<string,string> a;
-            	a.first = singleRow[0];
+        {  
+        	
+            min_value=funct(singleMenu,itemList);
+            if(min_value !=0){
+            	pair<string,float> a;
+            	a.first = singleMenu[0][0];
             	a.second = min_value;
             	Result.push_back(a);
             }
@@ -95,5 +112,27 @@ int main(int argc, char *argv[]){
        singleMenu.push_back(singleRow); 
        singleRow.clear();
     }
-
+           min_value=funct(singleMenu,itemList);
+            if(min_value !=0){
+            	pair<string,float> a;
+            	a.first = singleMenu[0][0];
+            	a.second = min_value;
+            	Result.push_back(a);
+            }
+        if(Result.empty()){
+		cout<<"No Match Found\n";
+	}
+        else{
+          string k=Result[0].first;
+	  float v=Result[0].second;
+        pair<string,float> a;
+	for(int i=0;i<Result.size();i++){
+		a=Result[i];
+			if(v > a.second){
+				k=a.first;
+				v=a.second;			
+			}
+	}
+           cout<<k<<", "<<v<<endl;
+ 	}	           
 }
