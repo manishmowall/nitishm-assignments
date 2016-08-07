@@ -1,0 +1,51 @@
+
+
+ Data Structure
+ ==============
+
+-vector<String> for storing user items(1D array)
+-vector<vector<String> > for storing csv file menu data(2D array)
+-vector<pair<string,string> > for storing key value pair of restaurant id and min value(key/value pair array).
+
+
+
+
+ Algorithm
+ =========
+
+1) Take input from user via command line.If user miss csv file or items then it show error message and exit from program.
+
+
+	if(argc < 3){	
+  		cout<<"Usage: "<<argv[0]<<" <csvfilename> <item> <item> ...\n";
+    	exit(0);
+   	}
+
+
+
+2) then storing items to vector of string 'userItemList'.
+
+3)Call function getMenuListFromCSVFile(const char *) to Retriveing row by row from csv file and storing id, value and items of each row in a vector and then storing that vector in 2D vector.This will result in 2D vector containing menu lists of all restaurants in one datastructure.
+
+
+		vector<vector<string> > restaurantMenuList;   
+
+4)call function getKeyValueList(vector<vector<string> >,vector<string>) to starting loop on 2D array row by row and storing each restaurant menu rows in 2D vector and then call the function getminValueInSpecificrestaurant(vector<vector<string> >,vector<string>) on that 2D vector of respective restaurant to get min value for user item list if exist.Storing that min value and restaurant key to key-value data structure.Do this for each restaurant and return that key-value data structure.
+		vector<pair<string,float> > keyValueList; 
+
+
+5)Now after getting all min value price of each restaurant menu for user item List. Find min value of all and return that min value and respective restaurant key.And if keyValueList is empty print to console "No Match Found"
+
+
+
+ Implementation
+ ==============
+
+$ g++ restaurantRecommendationProgram.cpp
+$ ./a.out sample_data.csv <item1> <item2> ... 
+
+
+ Use Cases
+ =========
+
+

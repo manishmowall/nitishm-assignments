@@ -8,131 +8,159 @@
 #include<utility> 
 using namespace std;
 
-std::string::size_type sz;
-float funct(vector<vector<string> > singleMenu,vector<string> itemList){
-    float min_value=0;
+//getMenuListFromCSVFile start
+vector<vector<string> > getMenuListFromCSVFile(const char * fileName){
+
+	ifstream csvFile(fileName);
+	vector<vector<string> > restaurantMenuList;	
+	restaurantMenuList.clear();
+    	vector<string> row;
+   	string line;
+	string word;
+   	
+	while(csvFile){
+        	getline(csvFile,line);
+        	stringstream lineStream(line);
+        	row.clear();
+	
+		while(getline(lineStream,word,','))
+            		row.push_back(word);
+         
+         	restaurantMenuList.push_back(row);
+         }
+ 
+	return restaurantMenuList;
+}//getMenuListFromCSVFile end
+
+
+//getminValueInSpecificrestaurant start
+float getminValueInSpecificrestaurant(vector<vector<string> > singleMenu,vector<string> userItemList){
+    	float min_value=0;
 	int flag;
-     vector<string> singleRow;
-     for(int i=0;i<singleMenu.size();i++){
-	flag=0;	
-	singleRow = singleMenu[i];
-	for(int j=2;j<singleRow.size();j++){
+     	vector<string> singleRow;
+     
+	for(int i=0;i<singleMenu.size();i++){
+		flag=0;	
+		singleRow = singleMenu[i];
+		for(int j=2;j<singleRow.size();j++){
 		
-		for(int k=0;k<itemList.size();k++){
+			for(int k=0;k<userItemList.size();k++){
                       
-			if(itemList[k] !="found"){
+				if(userItemList[k] !="found"){
 
-				if(singleRow[j] == " "+itemList[k]){
-					flag=1;
- 					itemList[k]="found"; 
-				//	cout<<"check";
-					break;
+					if(singleRow[j] == " "+userItemList[k]){
+						flag=1;
+ 						userItemList[k]="found"; 
+						break;
 
-												
-				}
+					}
 				
-			}
-		}	
-	}
+				}
+			}	
+		}
 		
-     	if(flag==1){
+     		if(flag==1){
 		min_value += atof(singleRow[1].c_str());
-	}		
-      } 
+		}		
+      	} 
     
-  for(int i=0;i<itemList.size();i++){
-   if(itemList[i] !="found")
-	return 0;
-   }
+  	
+	for(int i=0;i<userItemList.size();i++){
+   		if(userItemList[i] !="found")
+			return 0;
+   	}
    
   
-  return min_value;
-}
+  	return min_value;
 
+}//getminValueInSpecificrestaurant end
+
+//getKeyValueList start
+vector<pair<string,float> > getKeyValueList(vector<vector<string> > restaurantMenuList,vector<string> userItemList){
+	vector<pair<string,float> > keyValueList;
+    	vector<vector<string> > singleMenu;
+    	vector<string> singleRow;
+       	singleMenu.clear();    
+	singleRow=restaurantMenuList[0];    
+    	float min_value=0;
+    	string key=singleRow[0];
+    	for(int i=0;i<restaurantMenuList.size();i++){
+       		singleRow=restaurantMenuList[i];
+
+        	if(key != singleRow[0]){  
+        		min_value=getminValueInSpecificrestaurant(singleMenu,userItemList);
+            		if(min_value !=0){
+            			pair<string,float> a;
+            			a.first = singleMenu[0][0];
+            			a.second = min_value;
+            			keyValueList.push_back(a);
+			}
+            	
+		singleMenu.clear();
+            	key=singleRow[0]; 
+         	}    	 
+       		singleMenu.push_back(singleRow); 
+       		singleRow.clear();
+    	}
+          
+
+	min_value=getminValueInSpecificrestaurant(singleMenu,userItemList);
+            
+	if(min_value !=0){
+        	pair<string,float> a;
+            	a.first = singleMenu[0][0];
+            	a.second = min_value;
+            	keyValueList.push_back(a);
+        }
+
+	return keyValueList;
+
+}//getKeyValueList end
+
+
+//main start
 int main(int argc, char *argv[]){
 
-  if(argc < 3){	
-  	cout<<"Usage: "<<argv[0]<<" <csvfilename> <item> <item> ...\n";
-    exit(0);
-   }
-   vector<string> itemList;
-   itemList.clear();
-   int itemCount = 2;
-   while(itemCount<argc){
-        itemList.push_back(argv[itemCount]);
-        itemCount++;
-   }
+  
+	if(argc < 3){	
+		cout<<"Usage: "<<argv[0]<<" <csvfilename> <item> <item> ...\n";
+    		exit(0);
+  	}
+   	
+	
+	vector<string> userItemList;
+   	userItemList.clear();
+   	int i = 2;
+   	
+	while(i<argc){
+        	userItemList.push_back(argv[i]);
+        	i++;
+   	}
    
 
-   vector<string> row;
-   string line;
-   ifstream csvFile(argv[1]);
-   string word;
-   
-
-   vector<vector<string> > menuResturant;   
-   menuResturant.clear();
-    while(csvFile){
-        getline(csvFile,line);
-        stringstream lineStream(line);
-        row.clear();
-
-        while(getline(lineStream,word,','))
-            row.push_back(word);
-
-         
-         menuResturant.push_back(row);
-         
-    }
- 
+   	vector<vector<string> > restaurantMenuList=getMenuListFromCSVFile(argv[1]);   
+   	
      
-    vector<pair<string,float> > Result;
-    vector<vector<string> > singleMenu;
-    vector<string> singleRow;
-    singleRow=menuResturant[0];
-    singleMenu.clear();
-    float min_value=0;
-    string key=singleRow[0];
-    for(int i=0;i<menuResturant.size();i++){
-       singleRow=menuResturant[i];
+ 	vector<pair<string,float> > keyValueList=getKeyValueList(restaurantMenuList,userItemList);
+        
 
-        if(key != singleRow[0])
-        {  
-        	
-            min_value=funct(singleMenu,itemList);
-            if(min_value !=0){
-            	pair<string,float> a;
-            	a.first = singleMenu[0][0];
-            	a.second = min_value;
-            	Result.push_back(a);
-            }
-            singleMenu.clear();
-            key=singleRow[0]; 
-        }    	 
-       singleMenu.push_back(singleRow); 
-       singleRow.clear();
-    }
-           min_value=funct(singleMenu,itemList);
-            if(min_value !=0){
-            	pair<string,float> a;
-            	a.first = singleMenu[0][0];
-            	a.second = min_value;
-            	Result.push_back(a);
-            }
-        if(Result.empty()){
+
+	if(keyValueList.empty()){
 		cout<<"No Match Found\n";
 	}
         else{
-          string k=Result[0].first;
-	  float v=Result[0].second;
-        pair<string,float> a;
-	for(int i=0;i<Result.size();i++){
-		a=Result[i];
+          	string k=keyValueList[0].first;
+	  	float v=keyValueList[0].second;
+        	pair<string,float> a;
+		for(int i=0;i<keyValueList.size();i++){
+			a=keyValueList[i];
 			if(v > a.second){
 				k=a.first;
 				v=a.second;			
 			}
-	}
-           cout<<k<<", "<<v<<endl;
- 	}	           
-}
+		}
+           	
+		cout<<k<<", "<<v<<endl;
+ 	}
+	           
+}//main end
