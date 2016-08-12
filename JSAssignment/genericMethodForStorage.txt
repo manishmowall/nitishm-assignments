@@ -1,0 +1,19 @@
+setItem
+function setItem(key,value){ this.setItem(key,value);}
+
+getItem
+function getItem(key){ return this.getItem(key);}
+
+key
+function key(index){ return this.key(index);}
+
+length
+function length(){return this.length;}
+
+removeItem
+function removeItem(key){this.removeItem(key);}
+
+clear
+function removeAll(){this.clear();}
+
+
