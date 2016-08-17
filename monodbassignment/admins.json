@@ -1,0 +1,9 @@
+{
+  "id":"String datatype", 
+  "name": "String datatype",
+  "passwd":"String datatype",
+  "email": "string datatype",
+   "contact_no": "number datatype",
+  "dob": "date datatype",
+  "users":["contain all users which are handle by this admin"]
+}
