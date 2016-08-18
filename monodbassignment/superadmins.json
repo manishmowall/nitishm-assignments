@@ -1,0 +1,10 @@
+{
+  "id":"String datatype", 
+  "name": "String datatype",
+  "passwd":"String datatype",
+  "email": "string datatype",
+   "contact_no": "number datatype",
+  "dob": "date datatype",
+  "editors":["contain all editors which are handle by this superadmin"],
+  "admins":["contain all admins which are handle by this superadmin"]
+}

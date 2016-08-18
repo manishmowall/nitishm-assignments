@@ -1,0 +1,9 @@
+{
+  "id":"String datatype", 
+  "name": "String datatype",
+  "passwd":"String datatype",
+  "email": "string datatype",
+   "contact_no": "number datatype",
+  "dob": "date datatype",
+  "post":["contain all post_id which editor can edit"]
+}
