@@ -1,0 +1,21 @@
+{
+  "id":"String datatype", 
+  "author_id": "String datatype(id of author)",
+   "timestamp":"timestamp datatype",
+  "content":{
+    "head":"String datatype",
+    "body":"String datatype",
+    "tags":[],
+    "images":"url"
+    },
+    "comments":[{
+      "content":"String datatype",
+      "commenter_id":"String datatype",
+      "reply":{
+        "replier_id":"String datatype",
+        "content":"String datatype"
+      }
+      
+    },{}]
+}
+
