@@ -1,0 +1,180 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+.maindiv{
+    width:1170px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.header{
+    height: 50px;
+    background-color: dimgray;
+    position: relative;
+}
+
+.logo{
+    
+    background-color: #ff8000;
+    height:35px;
+    width:140px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    float: left;
+    display: block;
+    margin-left: 140px;
+}
+
+.headermenu{
+    list-style-type: none;
+    float:left;
+    margin-left: 60px;
+}
+
+.headermenu li{
+
+        
+
+    margin-bottom: 16px;
+    margin-top: 16px;
+    float:left;
+    margin-right:35px;    
+}
+
+.headermenu a{
+    font-size: 18px;
+    color:#aaaaaa;
+}
+
+.clear{
+    clear:both;
+}
+
+.blueblock {
+    
+    background-color: #71c4ea;
+    width: 100%;
+    height: 485px;
+        position: relative;
+
+}
+
+.whiteblock{    
+        position: relative;
+
+}
+
+.whiteblock p{
+   text-align: center;
+    margin:64px auto 70px auto;
+    color:#444444;
+    font-size: 36px;
+
+    
+}
+
+.circles{
+    list-style-type: none;
+    float: left;
+    
+    margin-left: 75px;
+    padding-left: 45px;
+   
+}
+.circles li{
+
+    float:left;
+    margin-left: 75px;
+       
+
+}
+.circle{
+      
+    width:140px;
+    height:140px;
+    border-radius:50px;
+    line-height:100px;
+    text-align:center;
+    background:#efefef;
+}
+
+.paras{
+    
+    list-style-type: none;
+    float: left;
+    
+  margin:20px auto 110px auto;
+    margin-left: 100px;
+
+}
+
+.paras li{
+
+    float:left;
+  margin-left: 55px;
+    
+}
+
+.para{
+
+    color:#888888;
+    font-size: 18px;
+}
+.footer{
+    background-color: #ECECEC;
+
+
+        position: relative;
+}
+
+.footermenu{
+    list-style-type: none;
+    float:left;
+    margin:20px  auto 20px 350px;
+    
+
+}
+
+.footermenu li{
+
+      margin-right: 20px;  
+
+    float:left;
+       
+}
+
+.footermenu a{
+    font-size: 16px;
+    color:#FF8000;
+}
+
+.footermenu a:hover{
+    color:#444444;
+    
+}
+
