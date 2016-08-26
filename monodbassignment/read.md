@@ -1,1 +1,3 @@
-there are five files each showing schema for each collection that is to be created to build database for mongodb assignment.
+There are two collections: 
+-one for users including normal,admin,editor and superadmin.
+-another one for posts of users

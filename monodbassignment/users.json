@@ -1,8 +1,11 @@
 {
-  "id":"String datatype", 
-  "name": "String datatype",
-  "passwd":"String datatype",
-  "email": "string datatype",
-   "contact_no": "number datatype",
-  "dob": "date datatype"
+   "type":"user's type",
+   "name": "name of user",
+   "password":"password for authentication",
+   "email": "email of user",
+   "contact_no": "phone no of user",
+   "dob": "date of birth",
+   "user_ids":[], // for admin only
+   "post_ids":[] // for editor only
 }
+

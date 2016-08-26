@@ -1,20 +1,20 @@
 {
-  "id":"String datatype", 
-  "author_id": "String datatype(id of author)",
-   "timestamp":"timestamp datatype",
-  "content":{
-    "head":"String datatype",
-    "body":"String datatype",
-    "tags":[],
-    "images":"url"
-    },
+  "user_id": "user id of users",
+   "posted_at":"timestamp at which it is posted",
+    "head":"head of html of this post file",
+    "body":"body of html of this post file",
+    "tags":[],  
+    "images":[], //array of urls of images
     "comments":[{
       "content":"String datatype",
-      "commenter_id":"String datatype",
-      "reply":{
-        "replier_id":"String datatype",
-        "content":"String datatype"
-      }
+      "user_id":"String datatype",
+      "commented_at":"timestamp",
+      "replies":[{
+        "user_id":"String datatype",
+        "content":"String datatype",
+        "replied_at":"timestamp" // changes on update also
+      },
+      {}]
       
     },{}]
 }
