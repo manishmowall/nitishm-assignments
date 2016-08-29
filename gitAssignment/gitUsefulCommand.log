@@ -1,0 +1,10 @@
+1) git status - tells the status of the branch(ex: how many files are staged or unstaged or deleted etc)
+2) git init - to initialise and reset history of .git 
+3) git clone <url> - to clone repo
+4) git checkout - to switch to branch or delete file
+5) git diff - to check difference in repo on pull 
+6) git log - to check all the commit status
+7) git push/pull - to push and pull to remote repo
+8) git stash - to stash changes which are not be commit on remote repo
+9)git branch <branch name> - to create branch
+10)git reset HEAD <filename> - to reset filename to prevois state
