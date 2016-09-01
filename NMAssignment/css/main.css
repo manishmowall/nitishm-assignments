@@ -1,0 +1,142 @@
+
+.parent .navbar{
+	padding: 0;
+	margin:0;
+	min-height: auto;
+	
+}
+
+.parent .navbar-default{
+	border:none;
+	border-bottom: 1px solid #ddd;
+
+}
+
+.parent .navbar-collapse{
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+.navbar-default .navbar-nav>li>a{
+	padding:0;
+	margin:0;
+}
+
+.parent .menuIcon{
+
+	margin:0;
+	display:inline-block;
+	height: 54px;
+	padding:20.5px 15px;
+}
+
+.parent .logo{
+	display:inline-block;
+	height: 54px;
+	padding: 10px;
+}
+
+.parent .mainCustomerNameWrapper{
+	display:inline-block;
+	height: 54px;
+}
+.parent .mainCustomerNameWrapper>a{
+	display: block;
+	margin:15.5px 10px;
+}
+
+.parent .mainCustomerName{
+	font-size: 12px;
+	color:white;
+	background-color: #1166ee;
+	padding:3px 8px;
+	border-radius: 12px;
+	display: block;
+}
+
+.parent .notificationIcon{
+	display:block;
+	height: 54px;
+	padding:17.5px;
+}
+.parent .cartIcon{
+	display:block;
+	height: 54px;
+	padding:17.5px;
+}
+.parent .userIconWrapper{
+		display: inline-block;
+}
+.parent .userIcon{
+	display: inline-block;
+	float:left;
+	height: 54px;
+	padding:17.5px;
+}
+
+.parent .userDetail{
+	float:left;
+	padding:7px 0; 
+}
+
+.userDetail .userName{
+	margin:0;
+	text-align:left;
+	font-size: 14px;
+	color: #222;
+}
+.userDetail .userEmail{
+	margin:0;
+	text-align:left;
+	font-size: 11px;
+	color: #666;
+}
+
+.clear{
+	float: none;
+	clear:both;
+}
+
+.leftNav .nav>li{
+	border-right: 1px solid #ddd;
+}
+
+.leftNav .nav>li:last-child{
+	border:0;
+}
+
+
+.rightNav .nav>li{
+	border-left:1px solid #ddd;
+}
+
+
+
+.footer{
+	padding-top: 10px
+	padding-bottom:10px;
+
+}
+
+.footer .footerListWrapper{
+	text-align:center;
+}
+.footer .footerList{
+	padding:5px 0;
+	text-decoration: none;
+	list-style-type: none;
+	display:inline-block;
+	margin:0 auto;
+	
+}
+
+
+.footer .footerList>li{
+	padding:0;
+	margin:0;
+	border-right: 1px solid #666;
+	float:left;
+}
+
+
