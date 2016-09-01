@@ -1,0 +1,21 @@
+{
+  "user_id": "user id of users",
+   "posted_at":"timestamp at which it is posted",
+    "head":"head of html of this post file",
+    "body":"body of html of this post file",
+    "tags":[],  
+    "images":[], //array of urls of images
+    "comments":[{
+      "content":"String datatype",
+      "user_id":"String datatype",
+      "commented_at":"timestamp",
+      "replies":[{
+        "user_id":"String datatype",
+        "content":"String datatype",
+        "replied_at":"timestamp" // changes on update also
+      },
+      {}]
+      
+    },{}]
+}
+

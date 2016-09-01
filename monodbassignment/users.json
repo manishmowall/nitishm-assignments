@@ -1,0 +1,11 @@
+{
+   "type":"user's type",
+   "name": "name of user",
+   "password":"password for authentication",
+   "email": "email of user",
+   "contact_no": "phone no of user",
+   "dob": "date of birth",
+   "user_ids":[], // for admin only
+   "post_ids":[] // for editor only
+}
+
