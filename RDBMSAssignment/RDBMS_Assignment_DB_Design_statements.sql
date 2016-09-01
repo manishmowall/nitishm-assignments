@@ -56,3 +56,18 @@ language plpgsql;
 
 create  trigger addcost after insert on order_product_list for each row execute procedure cal_order_cost();
 
+
+create function payment_function(o_id id_type,m text,d_id id_type,s text) returns void as $$
+declare p_id id_type;
+BEGIN
+perform payment_id from orders as o where o.order_id=o_id and payment_id is NOT NULL;
+IF FOUND then
+select payment_id into p_id from orders as p where o.order_id = o_id;
+update payment set status = s,discount_id=d_id,method=m,date=now() where id=p_id ;
+else
+insert into (status,method,date,discount_id)payment values(s,m,now(),d_id);
+select id into p_id from payment where  
+end if;
+end; $$
+language plpgsql;
+
