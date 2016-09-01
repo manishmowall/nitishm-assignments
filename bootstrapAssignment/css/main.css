@@ -73,7 +73,7 @@ body {
 .parent .info{
 padding-top:35px;
 padding-bottom: 45px;
-
+border-bottom: 1px solid lightgrey;
 
 }
 .parent .info .thumbNail{
@@ -109,20 +109,22 @@ padding-bottom: 45px;
 	font-style: it
  }
 
-.parent .info .announcementdiv h3{
+.parent .info .announcements h3{
 	font-weight: bold;
 	margin:0;
-	padding-top: 10px;
-	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
    color:#3355aa;
    font-size: 16px;
    border-bottom: 4px solid orange;
 }
 
-.announcementArray{
-	list-style-type: none;
-}
 
+.parent .info .announcements .annoucementArray{
+	list-style-type: none;
+	padding:0;
+	margin: 0;
+}
 
 .parent .info .announcements .annoucementArray li{
 	padding-top: 10px;
@@ -131,20 +133,42 @@ padding-bottom: 45px;
 
 .parent .info .announcements .annoucementArray li p{
 	font-size: 10px;
+	padding-top: 5px;
+	padding-bottom: 10px;
 	margin: 0;
+	border-bottom: 1px solid lightgrey;
 }
 
 
-.parent .info .announcements .annoucementArray li a{
+.parent .info .announcements .annoucementArray li .singleannoucement{
 	color:#616a71;
+	font-style: italic;
 
 }
 
-.parent .sectordiv{
+.parent .info .announcements .annoucementArray li .Amol{
+	color:#616a71;
+	font-weight: bold;
+
+}
+
+.parent .info .announcements .annoucementArray li .july23{
+	color:#616a71;
+	
+
+}
+
+
+.parent .info .announcements .viewMore{
+	font-style: italic;
+}
+
+.parent .sector{
 	padding-top:25px;
 	padding-bottom: 75px;
+	background-color: #f5f5f5;
 }
-.parent .sectordiv h2{
+.parent .sector h2{
 	margin:0;
 	text-align: center;
 	padding-bottom: 25px;
@@ -153,53 +177,109 @@ padding-bottom: 45px;
 
 }
 
-.parent .sectordiv .thumbnail{
+.parent .sector .thumbnail{
 	margin: 0;
 	padding: 5px;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
 }
-.parentdiv .sectordiv .thumbnail h3{
+.parent .sector .thumbnail .thumbnailhead{
 	font-size: 16px;
 	text-align: center;
 	margin:0;
 	padding-top: 5px;
-	padding-bottom:10px; 
+	padding-bottom:10px;
+	color:#4e6784; 
+	min-height:49px;
 }
 
-.parentdiv .sectordiv .thumbnail div{
+.parent .sector .thumbnail .thumbnailgreybox{
 	height: 250px;
 	background-color: lightgrey;
 }
 
-.parentdiv .footer{
+
+
+.parent .footer{
 	background-color: #333333;
+	padding-bottom: 30px;
+	padding-top: 10px;
 }
 
-.parentdiv .footer .navbar{
-	background-color: #333333;
-	margin:0;
+.parent .footer .footbar-left{
+	list-style-type: none;
+	margin: 5px 0;
+	padding: 0;
 }
-.parentdiv .footer .navbar-nav  li {
+
+.parent .footer .footbar-left>li{
+	padding:0 8px;
+	float: left;
+	border-left: 1px solid lightgrey;
+	
+}
+
+.parent .footer .footbar-left>li:first-child{
+	border: 0;
+}
+
+
+.parent .footer .footbar-left>li>a{
+	
 	font-size: 14px;
-	color: white;
-	border-right: 1px solid white;
-}
-.parentdiv .footer .navbar-nav li:last-child{
-	border:0;
+	color: lightgrey;
 }
 
-.parentdiv .footer .navbar-default{
-	border-color: transparent;
+.parent .footer .footbar-left .active{
+	color:white;
+}
+.parent .footer .footbar-left .clear{
+	float: none;
+	clear:both;
+
+}
+
+.parent .footer .row{
+
 	border-bottom:1px solid #3d3d3d;
+}
+
+.parent .footer .copyrightSymbol{
+	font-size: 11px;
+	color:lightgrey;
+	padding:10px 0;
+	margin: 0;
+
+}
+
+.parent .footer .footbar-right{
+	list-style-type: none;
+	margin: 5px 0;
+	padding: 0;
+}
+
+.parent .footer .footbar-right>li{
+	padding:0 8px;
+	float: right;
+	border-right: 1px solid lightgrey;
+	
+}
+
+.parent .footer .footbar-right>li:first-child{
+	border: 0;
+}
+
+
+.parent .footer .footbar-right>li>a{
+	
+	font-size: 14px;
+	color: lightgrey;
+}
+.parent .footer .footbar-right .clear{
+	float: none;
+	clear:both;
+	
+}
+
+.parent .footer .footbarWrapper{
 	padding-bottom: 10px;
 }
-
-
-
-.parentdiv .footer .copyrightSymbol{
-	font-size: 11px;
-	color:white;
-	padding:10px 0;
-
-}
-
