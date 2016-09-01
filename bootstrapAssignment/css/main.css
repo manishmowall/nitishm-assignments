@@ -257,6 +257,11 @@ border-bottom: 1px solid lightgrey;
 
 }
 
+.parent .footer .copyrightSymbol p{
+	padding:0;
+	margin:0;
+}
+
 .parent .footer .footbar-right{
 	list-style-type: none;
 	margin: 5px 0;
