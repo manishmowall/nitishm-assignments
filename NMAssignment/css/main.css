@@ -1,4 +1,8 @@
 
+body{
+	background-color: #fcfcfc;
+}
+
 .parent .navbar{
 	padding: 0;
 	margin:0;
@@ -113,6 +117,198 @@
 
 
 
+.addCustomer {
+	margin-top: 50px;
+
+}
+
+.addCustomer .customerLabel{
+	font-size: 18px;
+	color:#333;
+	float: left;
+	margin:0;
+	padding:1px 0;
+	margin-right: 30px;
+}
+
+.addCustomer .addButton{
+	display: inline-block;
+}
+
+.addCustomer .addButton>a{
+	display: block;
+	text-decoration: none;
+	font-size: 14px;
+	color:#1166ee;
+	border: 1px solid #1166ee;
+	padding:3px 14px;
+}
+
+
+
+.bannerBox{
+	width:368px;
+	height: 366px;
+	border:1px solid #ddd;
+}
+
+.thumbNail{
+	height: 90px;
+	border-bottom: 1px solid #ddd;
+}
+
+.thumbNail a{
+	display:block;
+	text-align:center;
+
+	
+}
+
+.thumbNail .img-responsive{
+	display: inline;
+}
+
+.banner{
+	margin-top: 20px;
+}
+
+.thumbNail1{padding-top: 19px;
+	padding-bottom: 20px;
+}
+
+.thumbNail2{
+	padding:15px 0;
+}
+.thumbNail3{
+	padding:16px 0;
+}
+
+.thumbNail4{
+	padding:22.5px 0;
+}
+
+.customerInfo{
+
+	padding:13.5px;
+
+}
+.customerName{
+	font-size: 18px;
+	color: #333333;
+
+}
+
+.lastUpdated{
+	font-size: 14px;
+	color: #aaaaaa;
+}
+
+.customerDataRow1 .tickets{
+	color:#1166ee;
+	font-size: 16px;
+	display: block;
+}
+
+.customerDataRow1 .ticketsValue{
+	font-size: 48px;
+	color:#1166ee;
+	display: block;
+}
+
+.customerDataRow1 .severity1{
+	font-size: 14px;
+	color:#ff0000;
+	display: block;
+}
+
+.customerDataRow1 .severity1Value{
+	font-size: 24px;
+	color: #ff0000;
+	display: block;
+}
+
+.customerDataRow1 .severity2{
+	font-size: 14px;
+	color: #333333;
+	display: block;
+}
+
+.customerDataRow1 .severity2Value{
+	font-size: 24px;
+	color: #1166ee;
+	display: block;
+}
+
+.customerDataRow2 .assets{
+	font-size: 16px;
+	color: #333333;
+	display: block;
+}
+
+.customerDataRow2 .assetsValue{
+	font-size: 30px;
+	color: #116600;
+	display: block;
+}
+
+.customerDataRow2 .alerts{
+	font-size: 16px;
+	color: #333333;
+	display: block;
+}
+
+.customerDataRow2 .alertsValue{
+	font-size: 30px;
+	color: #1166ee;
+	display: block;
+}
+
+
+
+.ratingIconWrapper {
+	
+	display: inline-block;
+	float:right;
+}
+
+.ratingIconWrapper .img-responsive{
+	display: inline-block;
+}
+
+.customerInfo .viewDetails{
+	font-size: 14px;
+	display: block;
+	text-decoration: underline;
+}
+
+.customerInfo .customerDataRow1 {
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.customerInfo .customerDataRow2 {
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.customerInfo .customerDataRow1 li{
+	float: left;
+	margin-right: 40px;
+}
+
+
+.customerInfo .customerDataRow2 li{
+	float: left;
+	margin-right: 40px;
+}
+
+
+
 .footer{
 	padding-top: 10px
 	padding-bottom:10px;
@@ -121,7 +317,11 @@
 
 .footer .footerListWrapper{
 	text-align:center;
+	margin-top:40px;
+	border-top: 1px solid #eeeeee;
+	padding:10px 0;
 }
+
 .footer .footerList{
 	padding:5px 0;
 	text-decoration: none;
@@ -133,10 +333,25 @@
 
 
 .footer .footerList>li{
+	border: 0;
 	padding:0;
 	margin:0;
-	border-right: 1px solid #666;
+	padding:0 10px; 
+	border-left: 1px solid #aaaaaa;
 	float:left;
+}
+
+.footer .footerList>li:first-child{
+	border:0;
+}
+
+.footer .footerList>li>a{
+	color:#aaaaaa;
+	text-decoration: none;
+}
+
+.footer .footerList>li>a:hover{
+	color:#dddddd;
 }
 
 
