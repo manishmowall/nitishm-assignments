@@ -4,10 +4,8 @@ COPY  . /usr/src/myapp
 
 WORKDIR /usr/src/myapp
 
-RUN apt-get update
-
-RUN apt-get install -y g++
-
-RUN g++ -o myapp restaurantRecommendationProgram.cpp
-
+RUN apt-get update \
+	&& apt-get install -y g++ \
+	&& g++ -o myapp restaurantRecommendationProgram.cpp
+ 
 CMD ["./myapp","sample_data.csv","burger"]
