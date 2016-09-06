@@ -1,4 +1,4 @@
-create database ecommerce_application;
+﻿create database ecommerce_application;
  create domain id_type varchar(10) check (value ~ '^[a-zA-Z0-9]+$' and length(value) >= 8 and length(value) <=10);
  create table products( id id_type primary key not null, name text not null);
  
@@ -66,7 +66,8 @@ select payment_id into p_id from orders as p where o.order_id = o_id;
 update payment set status = s,discount_id=d_id,method=m,date=now() where id=p_id ;
 else
 insert into (status,method,date,discount_id)payment values(s,m,now(),d_id);
-select id into p_id from payment where  
+select id into p_id from payment where status=s,method=m,discount_id=d_id;
+update orders set payment_id=p_id where id=o_id; 
 end if;
 end; $$
 language plpgsql;
