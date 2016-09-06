@@ -1,0 +1,2 @@
+logrotate state -- version 2
+"/home/webonise/logAssignment/testsample.log" 2016-9-2-15:38:59

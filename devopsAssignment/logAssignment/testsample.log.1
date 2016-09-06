@@ -1,0 +1,39 @@
+Log files are the most valuable tools available for Linux system security. The logrotate program is used to provide the administrator with an up-to-date record of events taking place on the system. The logrotate utility may also be used to back up log files, so copies may be used to establish patterns for system use. In this Daily Drill Down, I’ll cover the following topics:
+The logrotate configuration
+Setting defaults for logrotate
+Using the include option to read other configuration files
+Setting rotation parameters for specific files
+Using the include option to override defaults
+
+The logrotate program
+The logrotate program is a log file manager. It is used to regularly cycle (or rotate) log files by removing the oldest ones from your system and creating new log files. It may be used to rotate based on the age of the file or the file’s size, and usually runs automatically through the cron utility. The logrotate program may also be used to compress log files and to configure e-mail to users when they are rotated.
+
+The logrotate configuration
+The logrotate program is configured by entering options in the /etc/logrotate.conf file. This is a text file, which may contain any of the configuration options listed in the table below. The options entered in /etc/logrotate.conf may be used to set configuration parameters for any log file on the system. These options may also be used to allow logrotate to read configuration parameters from other log files, by using the include parameter.
+
+Option
+Function
+compress	This is used to compress the rotated log file with gzip.
+nocompress	This is used when you do not want to compress rotated log files.
+copytruncate	This is used when processes are still writing information to open log files. This option copies the active log file to a backup and truncates the active log file.
+nocopytruncate	This copies the log files to backup, but the open log file is not truncated.
+create mode owner group	This rotates the log file and creates a new log file with the specified permissions, owner, and group. The default is to use the same mode, owner, and group as the original file.
+nocreate	This prevents the creation of a new log file.
+delaycompress	When used with the compress option, the rotated log file is not compressed until the next time it is cycled.
+nodelaycompress	This overrides delaycompress. The log file is compressed when it is cycled.
+errors address	This mails logrotate errors to an address.
+ifempty	With this, the log file is rotated even if it is empty. This is the default for logrotate.
+notifempty	This does not rotate the log file if it is empty.
+mail address	This mails log files that are cycled to an address. When mail log files are cycled, they are effectively removed from the system.
+nomail	When mail log files are cycled, a copy is not mailed.
+olddir directory	With this, cycled log files are kept in the specified directory. This directory must be on the same filesystem as the current log files.
+noolddir	Cycled log files are kept in the same directory as the current log files.
+prerotate/endscript	These are statements that enclose commands to be executed prior to a log file being rotated. The prerotate and endscript keywords must appear on a line b
+
+
+
+
+
+
+
+this is awsome

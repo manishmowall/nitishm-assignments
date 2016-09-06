@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+nocreate	This prevents the creation of a new log file.
+delaycompress	When used with the compress option, the rotated log file is not compressed until the next time it is cycled.
+nodelaycompress	This overrides delaycompress. The log file is compressed when it is cycled.
+errors address	This mails logrotate errors to an address.
+ifempty	With this, the log file is rotated even if it is empty. This is the default for logrotate.
+notifempty	This does not rotate the log file if it is empty.
+mail address	This mails log files that are cycled to an address. When mail log files are cycled, they are effectively removed from the system.
+nomail	When mail log files are cycled, a copy is not mailed.
+olddir directory	With this, cycled log files are kept in the specified directory. This directory must be on the same filesystem as the current log files.
+noolddir	Cycled log files are kept in the same directory as the current log files.
+prerotate/endscript	These are statements that enclose commands to be executed prior to a log file being rotated. The prerotate and endscript keywords must appear on a line b
