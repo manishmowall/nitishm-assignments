@@ -1,0 +1,864 @@
+# Logfile created on 2016-09-06 12:50:15 +0530 by logger.rb/54072
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-06 12:50:15 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [82988475] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [82988475] Command: /usr/bin/env mkdir -p /tmp
+  INFO [82988475] Finished in 2.886 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-myapp-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-myapp-staging-webonise.sh 100.0%
+  INFO [af064844] Running /usr/bin/env chmod 700 /tmp/git-ssh-myapp-staging-webonise.sh on 127.0.0.1
+ DEBUG [af064844] Command: /usr/bin/env chmod 700 /tmp/git-ssh-myapp-staging-webonise.sh
+  INFO [af064844] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [dfdeef8a] Running /usr/bin/env git ls-remote --heads https://github.com/nitishm-webonise/capistranoassignment.git on 127.0.0.1
+ DEBUG [dfdeef8a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads https://github.com/nitishm-webonise/capistranoassignment.git )
+ DEBUG [dfdeef8a] 	2817c9bdde80c834ebc6b3c294f61c8e7fee6e63	refs/heads/master
+  INFO [dfdeef8a] Finished in 2.626 seconds with exit status 0 (successful).
+  INFO [95303237] Running /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/shared /home/webonise/capistranoAssignment/myapp/releases on 127.0.0.1
+ DEBUG [95303237] Command: /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/shared /home/webonise/capistranoAssignment/myapp/releases
+  INFO [95303237] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [2687e432] Running [ -f /home/webonise/capistranoAssignment/myapp/current/REVISION ] on 127.0.0.1
+ DEBUG [2687e432] Command: [ -f /home/webonise/capistranoAssignment/myapp/current/REVISION ]
+ DEBUG [2687e432] Finished in 0.007 seconds with exit status 1 (failed).
+ DEBUG [7e86949f] Running [ -f /home/webonise/capistranoAssignment/myapp/repo/HEAD ] on 127.0.0.1
+ DEBUG [7e86949f] Command: [ -f /home/webonise/capistranoAssignment/myapp/repo/HEAD ]
+ DEBUG [7e86949f] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [c1d16a42] Running if test ! -d /home/webonise/capistranoAssignment/myapp; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [c1d16a42] Command: if test ! -d /home/webonise/capistranoAssignment/myapp; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp'" 1>&2; false; fi
+ DEBUG [c1d16a42] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [16c3c5d8] Running /usr/bin/env git clone --mirror https://github.com/nitishm-webonise/capistranoassignment.git /home/webonise/capistranoAssignment/myapp/repo on 127.0.0.1
+ DEBUG [16c3c5d8] Command: cd /home/webonise/capistranoAssignment/myapp && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git clone --mirror https://github.com/nitishm-webonise/capistranoassignment.git /home/webonise/capistranoAssignment/myapp/repo )
+ DEBUG [16c3c5d8] 	Cloning into bare repository '/home/webonise/capistranoAssignment/myapp/repo'...
+  INFO [16c3c5d8] Finished in 4.735 seconds with exit status 0 (successful).
+ DEBUG [8b10e901] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [8b10e901] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [8b10e901] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [e3dcca3e] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [e3dcca3e] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e3dcca3e] 	Fetching origin
+  INFO [e3dcca3e] Finished in 2.289 seconds with exit status 0 (successful).
+ DEBUG [9c112248] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [9c112248] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [9c112248] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [1f8ffed1] Running /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/releases/20160906072024 on 127.0.0.1
+ DEBUG [1f8ffed1] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/releases/20160906072024 )
+  INFO [1f8ffed1] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [6d3b22af] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/capistranoAssignment/myapp/releases/20160906072024 on 127.0.0.1
+ DEBUG [6d3b22af] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/capistranoAssignment/myapp/releases/20160906072024 )
+  INFO [6d3b22af] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [5e58d33f] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [5e58d33f] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [5e58d33f] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [871c383d] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [871c383d] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [871c383d] 	2817c9bdde80c834ebc6b3c294f61c8e7fee6e63
+ DEBUG [871c383d] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [97b5043a] Running if test ! -d /home/webonise/capistranoAssignment/myapp/releases/20160906072024; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases/20160906072024'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [97b5043a] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/releases/20160906072024; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases/20160906072024'" 1>&2; false; fi
+ DEBUG [97b5043a] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [19bee376] Running /usr/bin/env echo "2817c9bdde80c834ebc6b3c294f61c8e7fee6e63" >> REVISION on 127.0.0.1
+ DEBUG [19bee376] Command: cd /home/webonise/capistranoAssignment/myapp/releases/20160906072024 && /usr/bin/env echo "2817c9bdde80c834ebc6b3c294f61c8e7fee6e63" >> REVISION
+  INFO [19bee376] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [67a69f79] Running /usr/bin/env ln -s /home/webonise/capistranoAssignment/myapp/releases/20160906072024 /home/webonise/capistranoAssignment/myapp/releases/current on 127.0.0.1
+ DEBUG [67a69f79] Command: /usr/bin/env ln -s /home/webonise/capistranoAssignment/myapp/releases/20160906072024 /home/webonise/capistranoAssignment/myapp/releases/current
+  INFO [67a69f79] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [88bffd6b] Running /usr/bin/env mv /home/webonise/capistranoAssignment/myapp/releases/current /home/webonise/capistranoAssignment/myapp on 127.0.0.1
+ DEBUG [88bffd6b] Command: /usr/bin/env mv /home/webonise/capistranoAssignment/myapp/releases/current /home/webonise/capistranoAssignment/myapp
+  INFO [88bffd6b] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [df25cb3c] Running cd /home/webonise/capistranoAssignment/myapp/releases/20160906072024 && docker build -t myapp-image . on 127.0.0.1
+ DEBUG [df25cb3c] Command: cd /home/webonise/capistranoAssignment/myapp/releases/20160906072024 && docker build -t myapp-image .
+ DEBUG [df25cb3c] 	Sending build context to Docker daemon 8.704 kB
+ DEBUG [df25cb3c] 	Step 1 : FROM ubuntu:14.04
+ DEBUG [df25cb3c] 	 ---> 4a725d3b3b1c
+ DEBUG [df25cb3c] 	Step 2 : COPY . /usr/src/myapp
+ DEBUG [df25cb3c] 	 ---> bdddf80532ff
+ DEBUG [df25cb3c] 	Removing intermediate container 181097afcc51
+ DEBUG [df25cb3c] 	Step 3 : WORKDIR /usr/src/myapp
+ DEBUG [df25cb3c] 	 ---> Running in d0f7e03872b4
+ DEBUG [df25cb3c] 	 ---> d388e347358e
+ DEBUG [df25cb3c] 	Removing intermediate container d0f7e03872b4
+ DEBUG [df25cb3c] 	Step 4 : RUN apt-get update 	&& apt-get install -y g++ 	&& g++ -o myapp restaurantRecommendationProgram.cpp
+ DEBUG [df25cb3c] 	 ---> Running in 6bfcb8f72185
+ DEBUG [df25cb3c] 	Ign http://archive.ubuntu.com trusty InRelease
+ DEBUG [df25cb3c] 	Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+ DEBUG [df25cb3c] 	Get:2 http://archive.ubuntu.com trusty-security InRelease [65.9 kB]
+ DEBUG [df25cb3c] 	Get:3 http://archive.ubuntu.com trusty Release.gpg [933 B]
+ DEBUG [df25cb3c] 	Get:4 http://archive.ubuntu.com trusty-updates/main Sources [472 kB]
+ DEBUG [df25cb3c] 	Get:5 http://archive.ubuntu.com trusty-updates/restricted Sources [5247 B]
+ DEBUG [df25cb3c] 	Get:6 http://archive.ubuntu.com trusty-updates/universe Sources [206 kB]
+ DEBUG [df25cb3c] 	Get:7 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1112 kB]
+ DEBUG [df25cb3c] 	Get:8 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [23.5 kB]
+ DEBUG [df25cb3c] 	Get:9 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [481 kB]
+ DEBUG [df25cb3c] 	Get:10 http://archive.ubuntu.com trusty-security/main Sources [151 kB]
+ DEBUG [df25cb3c] 	Get:11 http://archive.ubuntu.com trusty-security/restricted Sources [3944 B]
+ DEBUG [df25cb3c] 	Get:12 http://archive.ubuntu.com trusty-security/universe Sources [48.5 kB]
+ DEBUG [df25cb3c] 	Get:13 http://archive.ubuntu.com trusty-security/main amd64 Packages [652 kB]
+ DEBUG [df25cb3c] 	Get:14 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [20.2 kB]
+ DEBUG [df25cb3c] 	Get:15 http://archive.ubuntu.com trusty-security/universe amd64 Packages [177 kB]
+ DEBUG [df25cb3c] 	Get:16 http://archive.ubuntu.com trusty Release [58.5 kB]
+ DEBUG [df25cb3c] 	Get:17 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+ DEBUG [df25cb3c] 	Get:18 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+ DEBUG [df25cb3c] 	Get:19 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+ DEBUG [df25cb3c] 	Get:20 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+ DEBUG [df25cb3c] 	Get:21 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+ DEBUG [df25cb3c] 	Get:22 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+ DEBUG [df25cb3c] 	Fetched 22.2 MB in 4min 16s (86.3 kB/s)
+Reading package lists...
+ DEBUG [df25cb3c] 	
+ DEBUG [df25cb3c] 	Reading package lists...
+ DEBUG [df25cb3c] 	
+ DEBUG [df25cb3c] 	Building dependency tree...
+ DEBUG [df25cb3c] 	
+Reading state information...
+ DEBUG [df25cb3c] 	The following extra packages will be installed:
+  binutils cpp cpp-4.8 g++-4.8 gcc gcc-4.8 libasan0 libatomic1 libc-dev-bin
+  libc6-dev libcloog-isl4 libgcc-4.8-dev libgmp10 libgomp1 libisl10 libitm1
+  libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev libtsan0 linux-libc-dev
+  manpages manpages-dev
+ DEBUG [df25cb3c] 	Suggested packages:
+  binutils-doc cpp-doc gcc-4.8-locales g++-multilib g++-4.8-multilib
+  gcc-4.8-doc libstdc++6-4.8-dbg gcc-multilib make autoconf automake1.9
+  libtool flex bison gdb gcc-doc gcc-4.8-multilib libgcc1-dbg libgomp1-dbg
+  libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg libquadmath0-dbg
+  glibc-doc libstdc++-4.8-doc man-browser
+ DEBUG [df25cb3c] 	The following NEW packages will be installed:
+  binutils cpp cpp-4.8 g++ g++-4.8 gcc gcc-4.8 libasan0 libatomic1
+  libc-dev-bin libc6-dev libcloog-isl4 libgcc-4.8-dev libgmp10 libgomp1
+  libisl10 libitm1 libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev libtsan0
+  linux-libc-dev manpages manpages-dev
+ DEBUG [df25cb3c] 	0 upgraded, 25 newly installed, 0 to remove and 0 not upgraded.
+Need to get 39.1 MB of archives.
+After this operation, 112 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libasan0 amd64 4.8.4-2ubuntu1~14.04.3 [63.1 kB]
+ DEBUG [df25cb3c] 	Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libatomic1 amd64 4.8.4-2ubuntu1~14.04.3 [8636 B]
+ DEBUG [df25cb3c] 	Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libgmp10 amd64 2:5.1.3+dfsg-1ubuntu1 [218 kB]
+ DEBUG [df25cb3c] 	Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libisl10 amd64 0.12.2-1 [419 kB]
+ DEBUG [df25cb3c] 	Get:5 http://archive.ubuntu.com/ubuntu/ trusty/main libcloog-isl4 amd64 0.18.2-1 [57.5 kB]
+ DEBUG [df25cb3c] 	Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgomp1 amd64 4.8.4-2ubuntu1~14.04.3 [23.1 kB]
+ DEBUG [df25cb3c] 	Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libitm1 amd64 4.8.4-2ubuntu1~14.04.3 [28.5 kB]
+ DEBUG [df25cb3c] 	Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main libmpfr4 amd64 3.1.2-1 [203 kB]
+ DEBUG [df25cb3c] 	Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libquadmath0 amd64 4.8.4-2ubuntu1~14.04.3 [126 kB]
+ DEBUG [df25cb3c] 	Get:10 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libtsan0 amd64 4.8.4-2ubuntu1~14.04.3 [94.9 kB]
+ DEBUG [df25cb3c] 	Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libmpc3 amd64 1.0.1-1ubuntu1 [38.4 kB]
+ DEBUG [df25cb3c] 	Get:12 http://archive.ubuntu.com/ubuntu/ trusty/main manpages all 3.54-1ubuntu1 [627 kB]
+ DEBUG [df25cb3c] 	Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main binutils amd64 2.24-5ubuntu14.1 [2081 kB]
+ DEBUG [df25cb3c] 	Get:14 http://archive.ubuntu.com/ubuntu/ trusty-updates/main cpp-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [4595 kB]
+ DEBUG [df25cb3c] 	Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main cpp amd64 4:4.8.2-1ubuntu6 [27.5 kB]
+ DEBUG [df25cb3c] 	Get:16 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgcc-4.8-dev amd64 4.8.4-2ubuntu1~14.04.3 [1688 kB]
+ DEBUG [df25cb3c] 	Get:17 http://archive.ubuntu.com/ubuntu/ trusty-updates/main gcc-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [5047 kB]
+ DEBUG [df25cb3c] 	Get:18 http://archive.ubuntu.com/ubuntu/ trusty/main gcc amd64 4:4.8.2-1ubuntu6 [5098 B]
+ DEBUG [df25cb3c] 	Get:19 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc-dev-bin amd64 2.19-0ubuntu6.9 [69.0 kB]
+ DEBUG [df25cb3c] 	Get:20 http://archive.ubuntu.com/ubuntu/ trusty-updates/main linux-libc-dev amd64 3.13.0-95.142 [767 kB]
+ DEBUG [df25cb3c] 	Get:21 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc6-dev amd64 2.19-0ubuntu6.9 [1910 kB]
+ DEBUG [df25cb3c] 	Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libstdc++-4.8-dev amd64 4.8.4-2ubuntu1~14.04.3 [1053 kB]
+ DEBUG [df25cb3c] 	Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main g++-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [18.1 MB]
+ DEBUG [df25cb3c] 	Get:24 http://archive.ubuntu.com/ubuntu/ trusty/main g++ amd64 4:4.8.2-1ubuntu6 [1490 B]
+ DEBUG [df25cb3c] 	Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main manpages-dev all 3.54-1ubuntu1 [1820 kB]
+ DEBUG [df25cb3c] 	[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m
+ DEBUG [df25cb3c] 	[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m
+ DEBUG [df25cb3c] 	[91mdpkg-preconfigure: unable to re-open stdin: 
+[0m
+ DEBUG [df25cb3c] 	Fetched 39.1 MB in 7min 23s (88.1 kB/s)
+ DEBUG [df25cb3c] 	Selecting previously unselected package libasan0:amd64.
+ DEBUG [df25cb3c] 	(Reading database ... 11558 files and directories currently installed.)
+ DEBUG [df25cb3c] 	Preparing to unpack .../libasan0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libasan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libatomic1:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libatomic1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libatomic1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libgmp10:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libisl10:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libisl10_0.12.2-1_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libisl10:amd64 (0.12.2-1) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libcloog-isl4:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libcloog-isl4_0.18.2-1_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libcloog-isl4:amd64 (0.18.2-1) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libgomp1:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libgomp1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libgomp1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libitm1:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libitm1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libitm1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libmpfr4:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libmpfr4_3.1.2-1_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libmpfr4:amd64 (3.1.2-1) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libquadmath0:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libquadmath0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libtsan0:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libtsan0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libtsan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libmpc3:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libmpc3_1.0.1-1ubuntu1_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libmpc3:amd64 (1.0.1-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package manpages.
+ DEBUG [df25cb3c] 	Preparing to unpack .../manpages_3.54-1ubuntu1_all.deb ...
+ DEBUG [df25cb3c] 	Unpacking manpages (3.54-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package binutils.
+ DEBUG [df25cb3c] 	Preparing to unpack .../binutils_2.24-5ubuntu14.1_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking binutils (2.24-5ubuntu14.1) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package cpp-4.8.
+ DEBUG [df25cb3c] 	Preparing to unpack .../cpp-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking cpp-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package cpp.
+ DEBUG [df25cb3c] 	Preparing to unpack .../cpp_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking cpp (4:4.8.2-1ubuntu6) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libgcc-4.8-dev:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libgcc-4.8-dev_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package gcc-4.8.
+ DEBUG [df25cb3c] 	Preparing to unpack .../gcc-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking gcc-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package gcc.
+ DEBUG [df25cb3c] 	Preparing to unpack .../gcc_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking gcc (4:4.8.2-1ubuntu6) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libc-dev-bin.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libc-dev-bin_2.19-0ubuntu6.9_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libc-dev-bin (2.19-0ubuntu6.9) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package linux-libc-dev:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../linux-libc-dev_3.13.0-95.142_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking linux-libc-dev:amd64 (3.13.0-95.142) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libc6-dev:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libc6-dev_2.19-0ubuntu6.9_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libc6-dev:amd64 (2.19-0ubuntu6.9) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package libstdc++-4.8-dev:amd64.
+ DEBUG [df25cb3c] 	Preparing to unpack .../libstdc++-4.8-dev_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package g++-4.8.
+ DEBUG [df25cb3c] 	Preparing to unpack .../g++-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking g++-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package g++.
+ DEBUG [df25cb3c] 	Preparing to unpack .../g++_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [df25cb3c] 	Unpacking g++ (4:4.8.2-1ubuntu6) ...
+ DEBUG [df25cb3c] 	Selecting previously unselected package manpages-dev.
+ DEBUG [df25cb3c] 	Preparing to unpack .../manpages-dev_3.54-1ubuntu1_all.deb ...
+ DEBUG [df25cb3c] 	Unpacking manpages-dev (3.54-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Setting up libasan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up libatomic1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Setting up libisl10:amd64 (0.12.2-1) ...
+ DEBUG [df25cb3c] 	Setting up libcloog-isl4:amd64 (0.18.2-1) ...
+ DEBUG [df25cb3c] 	Setting up libgomp1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up libitm1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up libmpfr4:amd64 (3.1.2-1) ...
+ DEBUG [df25cb3c] 	Setting up libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up libtsan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up libmpc3:amd64 (1.0.1-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Setting up manpages (3.54-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Setting up binutils (2.24-5ubuntu14.1) ...
+ DEBUG [df25cb3c] 	Setting up cpp-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up cpp (4:4.8.2-1ubuntu6) ...
+ DEBUG [df25cb3c] 	Setting up libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up gcc-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up gcc (4:4.8.2-1ubuntu6) ...
+ DEBUG [df25cb3c] 	Setting up libc-dev-bin (2.19-0ubuntu6.9) ...
+ DEBUG [df25cb3c] 	Setting up linux-libc-dev:amd64 (3.13.0-95.142) ...
+ DEBUG [df25cb3c] 	Setting up libc6-dev:amd64 (2.19-0ubuntu6.9) ...
+ DEBUG [df25cb3c] 	Setting up libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up g++-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [df25cb3c] 	Setting up g++ (4:4.8.2-1ubuntu6) ...
+ DEBUG [df25cb3c] 	update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+ DEBUG [df25cb3c] 	Setting up manpages-dev (3.54-1ubuntu1) ...
+ DEBUG [df25cb3c] 	Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+ DEBUG [df25cb3c] 	 ---> 53d229981978
+ DEBUG [df25cb3c] 	Removing intermediate container 6bfcb8f72185
+ DEBUG [df25cb3c] 	Step 5 : CMD ./myapp sample_data.csv burger
+ DEBUG [df25cb3c] 	 ---> Running in 62db2f52ec2a
+ DEBUG [df25cb3c] 	 ---> fb09c086945c
+ DEBUG [df25cb3c] 	Removing intermediate container 62db2f52ec2a
+ DEBUG [df25cb3c] 	Successfully built fb09c086945c
+  INFO [df25cb3c] Finished in 730.985 seconds with exit status 0 (successful).
+  INFO [03f09da5] Running docker run -it --rm --name my-running-app myapp on 127.0.0.1
+ DEBUG [03f09da5] Command: docker run -it --rm --name my-running-app myapp
+ DEBUG [03f09da5] 	the input device is not a TTY
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-06 14:20:24 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [44ea6eea] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [44ea6eea] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-06 14:20:44 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1990c098] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [1990c098] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-06 14:22:49 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0d6a816a] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [0d6a816a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0d6a816a] Finished in 0.194 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-myapp-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-myapp-staging-webonise.sh 100.0%
+  INFO [6cd53468] Running /usr/bin/env chmod 700 /tmp/git-ssh-myapp-staging-webonise.sh on 127.0.0.1
+ DEBUG [6cd53468] Command: /usr/bin/env chmod 700 /tmp/git-ssh-myapp-staging-webonise.sh
+  INFO [6cd53468] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [11755867] Running /usr/bin/env git ls-remote --heads https://github.com/nitishm-webonise/capistranoassignment.git on 127.0.0.1
+ DEBUG [11755867] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads https://github.com/nitishm-webonise/capistranoassignment.git )
+ DEBUG [11755867] 	722c8680bb8e1a582e5bb456330b764e1b28c8fa	refs/heads/master
+  INFO [11755867] Finished in 2.253 seconds with exit status 0 (successful).
+  INFO [68f1bd80] Running /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/shared /home/webonise/capistranoAssignment/myapp/releases on 127.0.0.1
+ DEBUG [68f1bd80] Command: /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/shared /home/webonise/capistranoAssignment/myapp/releases
+  INFO [68f1bd80] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [5b0ff808] Running [ -f /home/webonise/capistranoAssignment/myapp/current/REVISION ] on 127.0.0.1
+ DEBUG [5b0ff808] Command: [ -f /home/webonise/capistranoAssignment/myapp/current/REVISION ]
+ DEBUG [5b0ff808] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [387e0124] Running [ -f /home/webonise/capistranoAssignment/myapp/repo/HEAD ] on 127.0.0.1
+ DEBUG [387e0124] Command: [ -f /home/webonise/capistranoAssignment/myapp/repo/HEAD ]
+ DEBUG [387e0124] Finished in 0.004 seconds with exit status 1 (failed).
+ DEBUG [ce0fbb13] Running if test ! -d /home/webonise/capistranoAssignment/myapp; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [ce0fbb13] Command: if test ! -d /home/webonise/capistranoAssignment/myapp; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp'" 1>&2; false; fi
+ DEBUG [ce0fbb13] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [9a141017] Running /usr/bin/env git clone --mirror https://github.com/nitishm-webonise/capistranoassignment.git /home/webonise/capistranoAssignment/myapp/repo on 127.0.0.1
+ DEBUG [9a141017] Command: cd /home/webonise/capistranoAssignment/myapp && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git clone --mirror https://github.com/nitishm-webonise/capistranoassignment.git /home/webonise/capistranoAssignment/myapp/repo )
+ DEBUG [9a141017] 	Cloning into bare repository '/home/webonise/capistranoAssignment/myapp/repo'...
+  INFO [9a141017] Finished in 4.815 seconds with exit status 0 (successful).
+ DEBUG [b676956e] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [b676956e] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [b676956e] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [862deae5] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [862deae5] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [862deae5] 	Fetching origin
+  INFO [862deae5] Finished in 2.258 seconds with exit status 0 (successful).
+ DEBUG [a3d0b91b] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [a3d0b91b] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [a3d0b91b] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [721bbe7e] Running /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/releases/20160906085252 on 127.0.0.1
+ DEBUG [721bbe7e] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/releases/20160906085252 )
+  INFO [721bbe7e] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [b4602943] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/capistranoAssignment/myapp/releases/20160906085252 on 127.0.0.1
+ DEBUG [b4602943] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/capistranoAssignment/myapp/releases/20160906085252 )
+  INFO [b4602943] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [504c3b34] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [504c3b34] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [504c3b34] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [29407471] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [29407471] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [29407471] 	722c8680bb8e1a582e5bb456330b764e1b28c8fa
+ DEBUG [29407471] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [33e2582b] Running if test ! -d /home/webonise/capistranoAssignment/myapp/releases/20160906085252; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases/20160906085252'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [33e2582b] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/releases/20160906085252; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases/20160906085252'" 1>&2; false; fi
+ DEBUG [33e2582b] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [9996c8a9] Running /usr/bin/env echo "722c8680bb8e1a582e5bb456330b764e1b28c8fa" >> REVISION on 127.0.0.1
+ DEBUG [9996c8a9] Command: cd /home/webonise/capistranoAssignment/myapp/releases/20160906085252 && /usr/bin/env echo "722c8680bb8e1a582e5bb456330b764e1b28c8fa" >> REVISION
+  INFO [9996c8a9] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [a498e340] Running /usr/bin/env ln -s /home/webonise/capistranoAssignment/myapp/releases/20160906085252 /home/webonise/capistranoAssignment/myapp/releases/current on 127.0.0.1
+ DEBUG [a498e340] Command: /usr/bin/env ln -s /home/webonise/capistranoAssignment/myapp/releases/20160906085252 /home/webonise/capistranoAssignment/myapp/releases/current
+  INFO [a498e340] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [a8f53b56] Running /usr/bin/env mv /home/webonise/capistranoAssignment/myapp/releases/current /home/webonise/capistranoAssignment/myapp on 127.0.0.1
+ DEBUG [a8f53b56] Command: /usr/bin/env mv /home/webonise/capistranoAssignment/myapp/releases/current /home/webonise/capistranoAssignment/myapp
+  INFO [a8f53b56] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [3b871b4a] Running cd /home/webonise/capistranoAssignment/myapp/releases/20160906085252 && docker build -t myapp-image . on 127.0.0.1
+ DEBUG [3b871b4a] Command: cd /home/webonise/capistranoAssignment/myapp/releases/20160906085252 && docker build -t myapp-image .
+ DEBUG [3b871b4a] 	Sending build context to Docker daemon 8.704 kB
+ DEBUG [3b871b4a] 	Step 1 : FROM ubuntu:14.04
+ DEBUG [3b871b4a] 	 ---> 4a725d3b3b1c
+ DEBUG [3b871b4a] 	Step 2 : COPY . /usr/src/myapp
+ DEBUG [3b871b4a] 	 ---> ba0fd4e59439
+ DEBUG [3b871b4a] 	Removing intermediate container 3b7d73e311a5
+ DEBUG [3b871b4a] 	Step 3 : WORKDIR /usr/src/myapp
+ DEBUG [3b871b4a] 	 ---> Running in eaa4e5d64970
+ DEBUG [3b871b4a] 	 ---> 0acf526edab6
+ DEBUG [3b871b4a] 	Removing intermediate container eaa4e5d64970
+ DEBUG [3b871b4a] 	Step 4 : RUN apt-get update 	&& apt-get install -y g++ 	&& g++ -o myapp restaurantRecommendationProgram.cpp
+ DEBUG [3b871b4a] 	 ---> Running in 1c7f76b11226
+ DEBUG [3b871b4a] 	Ign http://archive.ubuntu.com trusty InRelease
+ DEBUG [3b871b4a] 	Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+ DEBUG [3b871b4a] 	Get:2 http://archive.ubuntu.com trusty-security InRelease [65.9 kB]
+ DEBUG [3b871b4a] 	Get:3 http://archive.ubuntu.com trusty Release.gpg [933 B]
+ DEBUG [3b871b4a] 	Get:4 http://archive.ubuntu.com trusty-updates/main Sources [472 kB]
+ DEBUG [3b871b4a] 	Get:5 http://archive.ubuntu.com trusty-updates/restricted Sources [5247 B]
+ DEBUG [3b871b4a] 	Get:6 http://archive.ubuntu.com trusty-updates/universe Sources [206 kB]
+ DEBUG [3b871b4a] 	Get:7 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1112 kB]
+ DEBUG [3b871b4a] 	Get:8 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [23.5 kB]
+ DEBUG [3b871b4a] 	Get:9 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [481 kB]
+ DEBUG [3b871b4a] 	Get:10 http://archive.ubuntu.com trusty-security/main Sources [151 kB]
+ DEBUG [3b871b4a] 	Get:11 http://archive.ubuntu.com trusty-security/restricted Sources [3944 B]
+ DEBUG [3b871b4a] 	Get:12 http://archive.ubuntu.com trusty-security/universe Sources [48.5 kB]
+ DEBUG [3b871b4a] 	Get:13 http://archive.ubuntu.com trusty-security/main amd64 Packages [652 kB]
+ DEBUG [3b871b4a] 	Get:14 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [20.2 kB]
+ DEBUG [3b871b4a] 	Get:15 http://archive.ubuntu.com trusty-security/universe amd64 Packages [177 kB]
+ DEBUG [3b871b4a] 	Get:16 http://archive.ubuntu.com trusty Release [58.5 kB]
+ DEBUG [3b871b4a] 	Get:17 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+ DEBUG [3b871b4a] 	Get:18 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+ DEBUG [3b871b4a] 	Get:19 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+ DEBUG [3b871b4a] 	Get:20 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+ DEBUG [3b871b4a] 	Get:21 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+ DEBUG [3b871b4a] 	Get:22 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+ DEBUG [3b871b4a] 	Fetched 22.2 MB in 4min 11s (88.2 kB/s)
+Reading package lists...
+ DEBUG [3b871b4a] 	
+ DEBUG [3b871b4a] 	Reading package lists...
+ DEBUG [3b871b4a] 	
+ DEBUG [3b871b4a] 	Building dependency tree...
+ DEBUG [3b871b4a] 	
+Reading state information...
+ DEBUG [3b871b4a] 	The following extra packages will be installed:
+  binutils cpp cpp-4.8 g++-4.8 gcc gcc-4.8 libasan0 libatomic1 libc-dev-bin
+  libc6-dev libcloog-isl4 libgcc-4.8-dev libgmp10 libgomp1 libisl10 libitm1
+  libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev libtsan0 linux-libc-dev
+  manpages manpages-dev
+ DEBUG [3b871b4a] 	Suggested packages:
+  binutils-doc cpp-doc gcc-4.8-locales g++-multilib g++-4.8-multilib
+  gcc-4.8-doc libstdc++6-4.8-dbg gcc-multilib make autoconf automake1.9
+  libtool flex bison gdb gcc-doc gcc-4.8-multilib libgcc1-dbg libgomp1-dbg
+  libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg libquadmath0-dbg
+  glibc-doc libstdc++-4.8-doc man-browser
+ DEBUG [3b871b4a] 	The following NEW packages will be installed:
+  binutils cpp cpp-4.8 g++ g++-4.8 gcc gcc-4.8 libasan0 libatomic1
+  libc-dev-bin libc6-dev libcloog-isl4 libgcc-4.8-dev libgmp10 libgomp1
+  libisl10 libitm1 libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev libtsan0
+  linux-libc-dev manpages manpages-dev
+ DEBUG [3b871b4a] 	0 upgraded, 25 newly installed, 0 to remove and 0 not upgraded.
+Need to get 39.1 MB of archives.
+After this operation, 112 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libasan0 amd64 4.8.4-2ubuntu1~14.04.3 [63.1 kB]
+ DEBUG [3b871b4a] 	Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libatomic1 amd64 4.8.4-2ubuntu1~14.04.3 [8636 B]
+ DEBUG [3b871b4a] 	Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libgmp10 amd64 2:5.1.3+dfsg-1ubuntu1 [218 kB]
+ DEBUG [3b871b4a] 	Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libisl10 amd64 0.12.2-1 [419 kB]
+ DEBUG [3b871b4a] 	Get:5 http://archive.ubuntu.com/ubuntu/ trusty/main libcloog-isl4 amd64 0.18.2-1 [57.5 kB]
+ DEBUG [3b871b4a] 	Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgomp1 amd64 4.8.4-2ubuntu1~14.04.3 [23.1 kB]
+ DEBUG [3b871b4a] 	Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libitm1 amd64 4.8.4-2ubuntu1~14.04.3 [28.5 kB]
+ DEBUG [3b871b4a] 	Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main libmpfr4 amd64 3.1.2-1 [203 kB]
+ DEBUG [3b871b4a] 	Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libquadmath0 amd64 4.8.4-2ubuntu1~14.04.3 [126 kB]
+ DEBUG [3b871b4a] 	Get:10 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libtsan0 amd64 4.8.4-2ubuntu1~14.04.3 [94.9 kB]
+ DEBUG [3b871b4a] 	Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libmpc3 amd64 1.0.1-1ubuntu1 [38.4 kB]
+ DEBUG [3b871b4a] 	Get:12 http://archive.ubuntu.com/ubuntu/ trusty/main manpages all 3.54-1ubuntu1 [627 kB]
+ DEBUG [3b871b4a] 	Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main binutils amd64 2.24-5ubuntu14.1 [2081 kB]
+ DEBUG [3b871b4a] 	Get:14 http://archive.ubuntu.com/ubuntu/ trusty-updates/main cpp-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [4595 kB]
+ DEBUG [3b871b4a] 	Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main cpp amd64 4:4.8.2-1ubuntu6 [27.5 kB]
+ DEBUG [3b871b4a] 	Get:16 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgcc-4.8-dev amd64 4.8.4-2ubuntu1~14.04.3 [1688 kB]
+ DEBUG [3b871b4a] 	Get:17 http://archive.ubuntu.com/ubuntu/ trusty-updates/main gcc-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [5047 kB]
+ DEBUG [3b871b4a] 	Get:18 http://archive.ubuntu.com/ubuntu/ trusty/main gcc amd64 4:4.8.2-1ubuntu6 [5098 B]
+ DEBUG [3b871b4a] 	Get:19 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc-dev-bin amd64 2.19-0ubuntu6.9 [69.0 kB]
+ DEBUG [3b871b4a] 	Get:20 http://archive.ubuntu.com/ubuntu/ trusty-updates/main linux-libc-dev amd64 3.13.0-95.142 [767 kB]
+ DEBUG [3b871b4a] 	Get:21 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc6-dev amd64 2.19-0ubuntu6.9 [1910 kB]
+ DEBUG [3b871b4a] 	Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libstdc++-4.8-dev amd64 4.8.4-2ubuntu1~14.04.3 [1053 kB]
+ DEBUG [3b871b4a] 	Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main g++-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [18.1 MB]
+ DEBUG [3b871b4a] 	Get:24 http://archive.ubuntu.com/ubuntu/ trusty/main g++ amd64 4:4.8.2-1ubuntu6 [1490 B]
+ DEBUG [3b871b4a] 	Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main manpages-dev all 3.54-1ubuntu1 [1820 kB]
+ DEBUG [3b871b4a] 	[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m
+ DEBUG [3b871b4a] 	[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m
+ DEBUG [3b871b4a] 	[91mdpkg-preconfigure: unable to re-open stdin: 
+[0m
+ DEBUG [3b871b4a] 	Fetched 39.1 MB in 7min 19s (89.0 kB/s)
+ DEBUG [3b871b4a] 	Selecting previously unselected package libasan0:amd64.
+ DEBUG [3b871b4a] 	(Reading database ... 11558 files and directories currently installed.)
+ DEBUG [3b871b4a] 	Preparing to unpack .../libasan0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libasan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libatomic1:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libatomic1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libatomic1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libgmp10:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libisl10:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libisl10_0.12.2-1_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libisl10:amd64 (0.12.2-1) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libcloog-isl4:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libcloog-isl4_0.18.2-1_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libcloog-isl4:amd64 (0.18.2-1) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libgomp1:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libgomp1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libgomp1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libitm1:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libitm1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libitm1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libmpfr4:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libmpfr4_3.1.2-1_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libmpfr4:amd64 (3.1.2-1) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libquadmath0:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libquadmath0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libtsan0:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libtsan0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libtsan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libmpc3:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libmpc3_1.0.1-1ubuntu1_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libmpc3:amd64 (1.0.1-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package manpages.
+ DEBUG [3b871b4a] 	Preparing to unpack .../manpages_3.54-1ubuntu1_all.deb ...
+ DEBUG [3b871b4a] 	Unpacking manpages (3.54-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package binutils.
+ DEBUG [3b871b4a] 	Preparing to unpack .../binutils_2.24-5ubuntu14.1_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking binutils (2.24-5ubuntu14.1) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package cpp-4.8.
+ DEBUG [3b871b4a] 	Preparing to unpack .../cpp-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking cpp-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package cpp.
+ DEBUG [3b871b4a] 	Preparing to unpack .../cpp_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking cpp (4:4.8.2-1ubuntu6) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libgcc-4.8-dev:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libgcc-4.8-dev_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package gcc-4.8.
+ DEBUG [3b871b4a] 	Preparing to unpack .../gcc-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking gcc-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package gcc.
+ DEBUG [3b871b4a] 	Preparing to unpack .../gcc_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking gcc (4:4.8.2-1ubuntu6) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libc-dev-bin.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libc-dev-bin_2.19-0ubuntu6.9_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libc-dev-bin (2.19-0ubuntu6.9) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package linux-libc-dev:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../linux-libc-dev_3.13.0-95.142_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking linux-libc-dev:amd64 (3.13.0-95.142) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libc6-dev:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libc6-dev_2.19-0ubuntu6.9_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libc6-dev:amd64 (2.19-0ubuntu6.9) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package libstdc++-4.8-dev:amd64.
+ DEBUG [3b871b4a] 	Preparing to unpack .../libstdc++-4.8-dev_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package g++-4.8.
+ DEBUG [3b871b4a] 	Preparing to unpack .../g++-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking g++-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package g++.
+ DEBUG [3b871b4a] 	Preparing to unpack .../g++_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [3b871b4a] 	Unpacking g++ (4:4.8.2-1ubuntu6) ...
+ DEBUG [3b871b4a] 	Selecting previously unselected package manpages-dev.
+ DEBUG [3b871b4a] 	Preparing to unpack .../manpages-dev_3.54-1ubuntu1_all.deb ...
+ DEBUG [3b871b4a] 	Unpacking manpages-dev (3.54-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Setting up libasan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up libatomic1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Setting up libisl10:amd64 (0.12.2-1) ...
+ DEBUG [3b871b4a] 	Setting up libcloog-isl4:amd64 (0.18.2-1) ...
+ DEBUG [3b871b4a] 	Setting up libgomp1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up libitm1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up libmpfr4:amd64 (3.1.2-1) ...
+ DEBUG [3b871b4a] 	Setting up libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up libtsan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up libmpc3:amd64 (1.0.1-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Setting up manpages (3.54-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Setting up binutils (2.24-5ubuntu14.1) ...
+ DEBUG [3b871b4a] 	Setting up cpp-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up cpp (4:4.8.2-1ubuntu6) ...
+ DEBUG [3b871b4a] 	Setting up libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up gcc-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up gcc (4:4.8.2-1ubuntu6) ...
+ DEBUG [3b871b4a] 	Setting up libc-dev-bin (2.19-0ubuntu6.9) ...
+ DEBUG [3b871b4a] 	Setting up linux-libc-dev:amd64 (3.13.0-95.142) ...
+ DEBUG [3b871b4a] 	Setting up libc6-dev:amd64 (2.19-0ubuntu6.9) ...
+ DEBUG [3b871b4a] 	Setting up libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up g++-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [3b871b4a] 	Setting up g++ (4:4.8.2-1ubuntu6) ...
+ DEBUG [3b871b4a] 	update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+ DEBUG [3b871b4a] 	Setting up manpages-dev (3.54-1ubuntu1) ...
+ DEBUG [3b871b4a] 	Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+ DEBUG [3b871b4a] 	 ---> 96616939119c
+ DEBUG [3b871b4a] 	Removing intermediate container 1c7f76b11226
+Step 5 : CMD ./myapp sample_data.csv burger tofu_log
+ DEBUG [3b871b4a] 	 ---> Running in df5907362a58
+ DEBUG [3b871b4a] 	 ---> a08a880e874a
+ DEBUG [3b871b4a] 	Removing intermediate container df5907362a58
+ DEBUG [3b871b4a] 	Successfully built a08a880e874a
+  INFO [3b871b4a] Finished in 718.765 seconds with exit status 0 (successful).
+  INFO [9326936f] Running docker run -it --rm --name my-running-app myapp on 127.0.0.1
+ DEBUG [9326936f] Command: docker run -it --rm --name my-running-app myapp
+ DEBUG [9326936f] 	the input device is not a TTY
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-06 14:49:50 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7f05f86d] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [7f05f86d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7f05f86d] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-myapp-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-myapp-staging-webonise.sh 100.0%
+  INFO [b1a2c590] Running /usr/bin/env chmod 700 /tmp/git-ssh-myapp-staging-webonise.sh on 127.0.0.1
+ DEBUG [b1a2c590] Command: /usr/bin/env chmod 700 /tmp/git-ssh-myapp-staging-webonise.sh
+  INFO [b1a2c590] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [1138f1ff] Running /usr/bin/env git ls-remote --heads https://github.com/nitishm-webonise/capistranoassignment.git on 127.0.0.1
+ DEBUG [1138f1ff] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads https://github.com/nitishm-webonise/capistranoassignment.git )
+ DEBUG [1138f1ff] 	776bc9bdfc07be2b6994846ca0a89cad34c92f51	refs/heads/master
+  INFO [1138f1ff] Finished in 2.365 seconds with exit status 0 (successful).
+  INFO [dbf33a63] Running /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/shared /home/webonise/capistranoAssignment/myapp/releases on 127.0.0.1
+ DEBUG [dbf33a63] Command: /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/shared /home/webonise/capistranoAssignment/myapp/releases
+  INFO [dbf33a63] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [26688fd6] Running [ -f /home/webonise/capistranoAssignment/myapp/current/REVISION ] on 127.0.0.1
+ DEBUG [26688fd6] Command: [ -f /home/webonise/capistranoAssignment/myapp/current/REVISION ]
+ DEBUG [26688fd6] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [fa80d0f1] Running /usr/bin/env cat /home/webonise/capistranoAssignment/myapp/current/REVISION 2>/dev/null on 127.0.0.1
+ DEBUG [fa80d0f1] Command: /usr/bin/env cat /home/webonise/capistranoAssignment/myapp/current/REVISION 2>/dev/null
+ DEBUG [fa80d0f1] 	722c8680bb8e1a582e5bb456330b764e1b28c8fa
+ DEBUG [fa80d0f1] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [961ce656] Running [ -f /home/webonise/capistranoAssignment/myapp/repo/HEAD ] on 127.0.0.1
+ DEBUG [961ce656] Command: [ -f /home/webonise/capistranoAssignment/myapp/repo/HEAD ]
+ DEBUG [961ce656] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/webonise/capistranoAssignment/myapp/repo
+ DEBUG [6e9c4686] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [6e9c4686] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [6e9c4686] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [b6948c1e] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [b6948c1e] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b6948c1e] 	Fetching origin
+ DEBUG [b6948c1e] 	From https://github.com/nitishm-webonise/capistranoassignment
+   722c868..776bc9b  master     -> master
+  INFO [b6948c1e] Finished in 4.451 seconds with exit status 0 (successful).
+ DEBUG [e6e31970] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [e6e31970] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [e6e31970] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [83182796] Running /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/releases/20160906091953 on 127.0.0.1
+ DEBUG [83182796] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env mkdir -p /home/webonise/capistranoAssignment/myapp/releases/20160906091953 )
+  INFO [83182796] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [8b6654de] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/capistranoAssignment/myapp/releases/20160906091953 on 127.0.0.1
+ DEBUG [8b6654de] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/capistranoAssignment/myapp/releases/20160906091953 )
+  INFO [8b6654de] Finished in 0.010 seconds with exit status 0 (successful).
+ DEBUG [1e5db872] Running if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [1e5db872] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/repo; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/repo'" 1>&2; false; fi
+ DEBUG [1e5db872] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [8c1252c3] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [8c1252c3] Command: cd /home/webonise/capistranoAssignment/myapp/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-myapp-staging-webonise.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8c1252c3] 	776bc9bdfc07be2b6994846ca0a89cad34c92f51
+ DEBUG [8c1252c3] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [b18daa3c] Running if test ! -d /home/webonise/capistranoAssignment/myapp/releases/20160906091953; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases/20160906091953'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [b18daa3c] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/releases/20160906091953; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases/20160906091953'" 1>&2; false; fi
+ DEBUG [b18daa3c] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [22a29e39] Running /usr/bin/env echo "776bc9bdfc07be2b6994846ca0a89cad34c92f51" >> REVISION on 127.0.0.1
+ DEBUG [22a29e39] Command: cd /home/webonise/capistranoAssignment/myapp/releases/20160906091953 && /usr/bin/env echo "776bc9bdfc07be2b6994846ca0a89cad34c92f51" >> REVISION
+  INFO [22a29e39] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [1e5ea16f] Running /usr/bin/env ln -s /home/webonise/capistranoAssignment/myapp/releases/20160906091953 /home/webonise/capistranoAssignment/myapp/releases/current on 127.0.0.1
+ DEBUG [1e5ea16f] Command: /usr/bin/env ln -s /home/webonise/capistranoAssignment/myapp/releases/20160906091953 /home/webonise/capistranoAssignment/myapp/releases/current
+  INFO [1e5ea16f] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [98fcc53d] Running /usr/bin/env mv /home/webonise/capistranoAssignment/myapp/releases/current /home/webonise/capistranoAssignment/myapp on 127.0.0.1
+ DEBUG [98fcc53d] Command: /usr/bin/env mv /home/webonise/capistranoAssignment/myapp/releases/current /home/webonise/capistranoAssignment/myapp
+  INFO [98fcc53d] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [5b3014f9] Running cd /home/webonise/capistranoAssignment/myapp/releases/20160906091953 && docker build -t myapp-image . on 127.0.0.1
+ DEBUG [5b3014f9] Command: cd /home/webonise/capistranoAssignment/myapp/releases/20160906091953 && docker build -t myapp-image .
+ DEBUG [5b3014f9] 	Sending build context to Docker daemon 8.704 kB
+ DEBUG [5b3014f9] 	Step 1 : FROM ubuntu:14.04
+ DEBUG [5b3014f9] 	 ---> 4a725d3b3b1c
+ DEBUG [5b3014f9] 	Step 2 : COPY . /usr/src/myapp
+ DEBUG [5b3014f9] 	 ---> cb2a5da239c1
+ DEBUG [5b3014f9] 	Removing intermediate container 59fddc9f0f6f
+ DEBUG [5b3014f9] 	Step 3 : WORKDIR /usr/src/myapp
+ DEBUG [5b3014f9] 	 ---> Running in e1e1d8a79f36
+ DEBUG [5b3014f9] 	 ---> c32320d3ac76
+ DEBUG [5b3014f9] 	Removing intermediate container e1e1d8a79f36
+Step 4 : RUN apt-get update 	&& apt-get install -y g++ 	&& g++ -o myapp restaurantRecommendationProgram.cpp
+ DEBUG [5b3014f9] 	 ---> Running in 9a267d1c6e7e
+ DEBUG [5b3014f9] 	Ign http://archive.ubuntu.com trusty InRelease
+ DEBUG [5b3014f9] 	Get:1 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+ DEBUG [5b3014f9] 	Get:2 http://archive.ubuntu.com trusty-security InRelease [65.9 kB]
+ DEBUG [5b3014f9] 	Get:3 http://archive.ubuntu.com trusty Release.gpg [933 B]
+ DEBUG [5b3014f9] 	Get:4 http://archive.ubuntu.com trusty-updates/main Sources [472 kB]
+ DEBUG [5b3014f9] 	Get:5 http://archive.ubuntu.com trusty-updates/restricted Sources [5247 B]
+ DEBUG [5b3014f9] 	Get:6 http://archive.ubuntu.com trusty-updates/universe Sources [206 kB]
+ DEBUG [5b3014f9] 	Get:7 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1112 kB]
+ DEBUG [5b3014f9] 	Get:8 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [23.5 kB]
+ DEBUG [5b3014f9] 	Get:9 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [481 kB]
+ DEBUG [5b3014f9] 	Get:10 http://archive.ubuntu.com trusty-security/main Sources [151 kB]
+ DEBUG [5b3014f9] 	Get:11 http://archive.ubuntu.com trusty-security/restricted Sources [3944 B]
+ DEBUG [5b3014f9] 	Get:12 http://archive.ubuntu.com trusty-security/universe Sources [48.5 kB]
+ DEBUG [5b3014f9] 	Get:13 http://archive.ubuntu.com trusty-security/main amd64 Packages [652 kB]
+ DEBUG [5b3014f9] 	Get:14 http://archive.ubuntu.com trusty-security/restricted amd64 Packages [20.2 kB]
+ DEBUG [5b3014f9] 	Get:15 http://archive.ubuntu.com trusty-security/universe amd64 Packages [177 kB]
+ DEBUG [5b3014f9] 	Get:16 http://archive.ubuntu.com trusty Release [58.5 kB]
+ DEBUG [5b3014f9] 	Get:17 http://archive.ubuntu.com trusty/main Sources [1335 kB]
+ DEBUG [5b3014f9] 	Get:18 http://archive.ubuntu.com trusty/restricted Sources [5335 B]
+ DEBUG [5b3014f9] 	Get:19 http://archive.ubuntu.com trusty/universe Sources [7926 kB]
+ DEBUG [5b3014f9] 	Get:20 http://archive.ubuntu.com trusty/main amd64 Packages [1743 kB]
+ DEBUG [5b3014f9] 	Get:21 http://archive.ubuntu.com trusty/restricted amd64 Packages [16.0 kB]
+ DEBUG [5b3014f9] 	Get:22 http://archive.ubuntu.com trusty/universe amd64 Packages [7589 kB]
+ DEBUG [5b3014f9] 	Fetched 22.2 MB in 4min 10s (88.4 kB/s)
+Reading package lists...
+ DEBUG [5b3014f9] 	
+ DEBUG [5b3014f9] 	Reading package lists...
+ DEBUG [5b3014f9] 	
+ DEBUG [5b3014f9] 	Building dependency tree...
+ DEBUG [5b3014f9] 	
+Reading state information...
+ DEBUG [5b3014f9] 	The following extra packages will be installed:
+  binutils cpp cpp-4.8 g++-4.8 gcc gcc-4.8 libasan0 libatomic1 libc-dev-bin
+  libc6-dev libcloog-isl4 libgcc-4.8-dev libgmp10 libgomp1 libisl10 libitm1
+  libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev libtsan0 linux-libc-dev
+  manpages manpages-dev
+ DEBUG [5b3014f9] 	Suggested packages:
+  binutils-doc cpp-doc gcc-4.8-locales g++-multilib g++-4.8-multilib
+  gcc-4.8-doc libstdc++6-4.8-dbg gcc-multilib make autoconf automake1.9
+  libtool flex bison gdb gcc-doc gcc-4.8-multilib libgcc1-dbg libgomp1-dbg
+  libitm1-dbg libatomic1-dbg libasan0-dbg libtsan0-dbg libquadmath0-dbg
+  glibc-doc libstdc++-4.8-doc man-browser
+ DEBUG [5b3014f9] 	The following NEW packages will be installed:
+  binutils cpp cpp-4.8 g++ g++-4.8 gcc gcc-4.8 libasan0 libatomic1
+  libc-dev-bin libc6-dev libcloog-isl4 libgcc-4.8-dev libgmp10 libgomp1
+  libisl10 libitm1 libmpc3 libmpfr4 libquadmath0 libstdc++-4.8-dev libtsan0
+  linux-libc-dev manpages manpages-dev
+ DEBUG [5b3014f9] 	0 upgraded, 25 newly installed, 0 to remove and 0 not upgraded.
+Need to get 39.1 MB of archives.
+After this operation, 112 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libasan0 amd64 4.8.4-2ubuntu1~14.04.3 [63.1 kB]
+ DEBUG [5b3014f9] 	Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libatomic1 amd64 4.8.4-2ubuntu1~14.04.3 [8636 B]
+ DEBUG [5b3014f9] 	Get:3 http://archive.ubuntu.com/ubuntu/ trusty/main libgmp10 amd64 2:5.1.3+dfsg-1ubuntu1 [218 kB]
+ DEBUG [5b3014f9] 	Get:4 http://archive.ubuntu.com/ubuntu/ trusty/main libisl10 amd64 0.12.2-1 [419 kB]
+ DEBUG [5b3014f9] 	Get:5 http://archive.ubuntu.com/ubuntu/ trusty/main libcloog-isl4 amd64 0.18.2-1 [57.5 kB]
+ DEBUG [5b3014f9] 	Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgomp1 amd64 4.8.4-2ubuntu1~14.04.3 [23.1 kB]
+ DEBUG [5b3014f9] 	Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libitm1 amd64 4.8.4-2ubuntu1~14.04.3 [28.5 kB]
+ DEBUG [5b3014f9] 	Get:8 http://archive.ubuntu.com/ubuntu/ trusty/main libmpfr4 amd64 3.1.2-1 [203 kB]
+ DEBUG [5b3014f9] 	Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libquadmath0 amd64 4.8.4-2ubuntu1~14.04.3 [126 kB]
+ DEBUG [5b3014f9] 	Get:10 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libtsan0 amd64 4.8.4-2ubuntu1~14.04.3 [94.9 kB]
+ DEBUG [5b3014f9] 	Get:11 http://archive.ubuntu.com/ubuntu/ trusty/main libmpc3 amd64 1.0.1-1ubuntu1 [38.4 kB]
+ DEBUG [5b3014f9] 	Get:12 http://archive.ubuntu.com/ubuntu/ trusty/main manpages all 3.54-1ubuntu1 [627 kB]
+ DEBUG [5b3014f9] 	Get:13 http://archive.ubuntu.com/ubuntu/ trusty-updates/main binutils amd64 2.24-5ubuntu14.1 [2081 kB]
+ DEBUG [5b3014f9] 	Get:14 http://archive.ubuntu.com/ubuntu/ trusty-updates/main cpp-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [4595 kB]
+ DEBUG [5b3014f9] 	Get:15 http://archive.ubuntu.com/ubuntu/ trusty/main cpp amd64 4:4.8.2-1ubuntu6 [27.5 kB]
+ DEBUG [5b3014f9] 	Get:16 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libgcc-4.8-dev amd64 4.8.4-2ubuntu1~14.04.3 [1688 kB]
+ DEBUG [5b3014f9] 	Get:17 http://archive.ubuntu.com/ubuntu/ trusty-updates/main gcc-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [5047 kB]
+ DEBUG [5b3014f9] 	Get:18 http://archive.ubuntu.com/ubuntu/ trusty/main gcc amd64 4:4.8.2-1ubuntu6 [5098 B]
+ DEBUG [5b3014f9] 	Get:19 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc-dev-bin amd64 2.19-0ubuntu6.9 [69.0 kB]
+ DEBUG [5b3014f9] 	Get:20 http://archive.ubuntu.com/ubuntu/ trusty-updates/main linux-libc-dev amd64 3.13.0-95.142 [767 kB]
+ DEBUG [5b3014f9] 	Get:21 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libc6-dev amd64 2.19-0ubuntu6.9 [1910 kB]
+ DEBUG [5b3014f9] 	Get:22 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libstdc++-4.8-dev amd64 4.8.4-2ubuntu1~14.04.3 [1053 kB]
+ DEBUG [5b3014f9] 	Get:23 http://archive.ubuntu.com/ubuntu/ trusty-updates/main g++-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [18.1 MB]
+ DEBUG [5b3014f9] 	Get:24 http://archive.ubuntu.com/ubuntu/ trusty/main g++ amd64 4:4.8.2-1ubuntu6 [1490 B]
+ DEBUG [5b3014f9] 	Get:25 http://archive.ubuntu.com/ubuntu/ trusty/main manpages-dev all 3.54-1ubuntu1 [1820 kB]
+ DEBUG [5b3014f9] 	Get:26 http://archive.ubuntu.com/ubuntu/ trusty-security/main g++-4.8 amd64 4.8.4-2ubuntu1~14.04.3 [18.1 MB]
+ DEBUG [5b3014f9] 	[91mdebconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+[0m
+ DEBUG [5b3014f9] 	[91mdebconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+[0m
+ DEBUG [5b3014f9] 	[91mdpkg-preconfigure: unable to re-open stdin: 
+[0m
+ DEBUG [5b3014f9] 	Fetched 21.6 MB in 9min 21s (38.4 kB/s)
+ DEBUG [5b3014f9] 	Selecting previously unselected package libasan0:amd64.
+ DEBUG [5b3014f9] 	(Reading database ... 11558 files and directories currently installed.)
+ DEBUG [5b3014f9] 	Preparing to unpack .../libasan0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libasan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libatomic1:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libatomic1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libatomic1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libgmp10:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libgmp10_2%3a5.1.3+dfsg-1ubuntu1_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libisl10:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libisl10_0.12.2-1_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libisl10:amd64 (0.12.2-1) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libcloog-isl4:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libcloog-isl4_0.18.2-1_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libcloog-isl4:amd64 (0.18.2-1) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libgomp1:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libgomp1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libgomp1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libitm1:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libitm1_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libitm1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libmpfr4:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libmpfr4_3.1.2-1_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libmpfr4:amd64 (3.1.2-1) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libquadmath0:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libquadmath0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libtsan0:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libtsan0_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libtsan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libmpc3:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libmpc3_1.0.1-1ubuntu1_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libmpc3:amd64 (1.0.1-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package manpages.
+ DEBUG [5b3014f9] 	Preparing to unpack .../manpages_3.54-1ubuntu1_all.deb ...
+ DEBUG [5b3014f9] 	Unpacking manpages (3.54-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package binutils.
+ DEBUG [5b3014f9] 	Preparing to unpack .../binutils_2.24-5ubuntu14.1_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking binutils (2.24-5ubuntu14.1) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package cpp-4.8.
+ DEBUG [5b3014f9] 	Preparing to unpack .../cpp-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking cpp-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package cpp.
+ DEBUG [5b3014f9] 	Preparing to unpack .../cpp_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking cpp (4:4.8.2-1ubuntu6) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libgcc-4.8-dev:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libgcc-4.8-dev_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package gcc-4.8.
+ DEBUG [5b3014f9] 	Preparing to unpack .../gcc-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking gcc-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package gcc.
+ DEBUG [5b3014f9] 	Preparing to unpack .../gcc_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking gcc (4:4.8.2-1ubuntu6) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../libc-dev-bin_2.19-0ubuntu6.9_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libc-dev-bin (2.19-0ubuntu6.9) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package linux-libc-dev:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../linux-libc-dev_3.13.0-95.142_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking linux-libc-dev:amd64 (3.13.0-95.142) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libc6-dev:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libc6-dev_2.19-0ubuntu6.9_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libc6-dev:amd64 (2.19-0ubuntu6.9) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package libstdc++-4.8-dev:amd64.
+ DEBUG [5b3014f9] 	Preparing to unpack .../libstdc++-4.8-dev_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package g++-4.8.
+ DEBUG [5b3014f9] 	Preparing to unpack .../g++-4.8_4.8.4-2ubuntu1~14.04.3_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking g++-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package g++.
+ DEBUG [5b3014f9] 	Preparing to unpack .../g++_4%3a4.8.2-1ubuntu6_amd64.deb ...
+ DEBUG [5b3014f9] 	Unpacking g++ (4:4.8.2-1ubuntu6) ...
+ DEBUG [5b3014f9] 	Selecting previously unselected package manpages-dev.
+ DEBUG [5b3014f9] 	Preparing to unpack .../manpages-dev_3.54-1ubuntu1_all.deb ...
+ DEBUG [5b3014f9] 	Unpacking manpages-dev (3.54-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Setting up libasan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up libatomic1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up libgmp10:amd64 (2:5.1.3+dfsg-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Setting up libisl10:amd64 (0.12.2-1) ...
+ DEBUG [5b3014f9] 	Setting up libcloog-isl4:amd64 (0.18.2-1) ...
+ DEBUG [5b3014f9] 	Setting up libgomp1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up libitm1:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up libmpfr4:amd64 (3.1.2-1) ...
+ DEBUG [5b3014f9] 	Setting up libquadmath0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up libtsan0:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up libmpc3:amd64 (1.0.1-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Setting up manpages (3.54-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Setting up binutils (2.24-5ubuntu14.1) ...
+ DEBUG [5b3014f9] 	Setting up cpp-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up cpp (4:4.8.2-1ubuntu6) ...
+ DEBUG [5b3014f9] 	Setting up libgcc-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up gcc-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up gcc (4:4.8.2-1ubuntu6) ...
+ DEBUG [5b3014f9] 	Setting up libc-dev-bin (2.19-0ubuntu6.9) ...
+ DEBUG [5b3014f9] 	Setting up linux-libc-dev:amd64 (3.13.0-95.142) ...
+ DEBUG [5b3014f9] 	Setting up libc6-dev:amd64 (2.19-0ubuntu6.9) ...
+ DEBUG [5b3014f9] 	Setting up libstdc++-4.8-dev:amd64 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up g++-4.8 (4.8.4-2ubuntu1~14.04.3) ...
+ DEBUG [5b3014f9] 	Setting up g++ (4:4.8.2-1ubuntu6) ...
+ DEBUG [5b3014f9] 	update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+ DEBUG [5b3014f9] 	
+ DEBUG [5b3014f9] 	Setting up manpages-dev (3.54-1ubuntu1) ...
+ DEBUG [5b3014f9] 	Processing triggers for libc-bin (2.19-0ubuntu6.9) ...
+ DEBUG [5b3014f9] 	 ---> 3d201e4fdff0
+ DEBUG [5b3014f9] 	Removing intermediate container 9a267d1c6e7e
+ DEBUG [5b3014f9] 	Step 5 : CMD ./myapp sample_data.csv burger
+ DEBUG [5b3014f9] 	 ---> Running in d5589f0f3ab0
+ DEBUG [5b3014f9] 	 ---> 489984aca7c6
+ DEBUG [5b3014f9] 	Removing intermediate container d5589f0f3ab0
+ DEBUG [5b3014f9] 	Successfully built 489984aca7c6
+  INFO [5b3014f9] Finished in 842.558 seconds with exit status 0 (successful).
+  INFO [86327f90] Running docker run -i -a stdout --name my-running-app myapp on 127.0.0.1
+ DEBUG [86327f90] Command: docker run -i -a stdout --name my-running-app myapp
+ DEBUG [86327f90] 	1, 4
+  INFO [86327f90] Finished in 1.431 seconds with exit status 0 (successful).
+ DEBUG [dcea0a50] Running /usr/bin/env ls -xtr /home/webonise/capistranoAssignment/myapp/releases on 127.0.0.1
+ DEBUG [dcea0a50] Command: /usr/bin/env ls -xtr /home/webonise/capistranoAssignment/myapp/releases
+ DEBUG [dcea0a50] 	20160906085252	20160906091953
+ DEBUG [dcea0a50] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [019caed3] Running if test ! -d /home/webonise/capistranoAssignment/myapp/releases; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [019caed3] Command: if test ! -d /home/webonise/capistranoAssignment/myapp/releases; then echo "Directory does not exist '/home/webonise/capistranoAssignment/myapp/releases'" 1>&2; false; fi
+ DEBUG [019caed3] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [42bf15ae] Running /usr/bin/env echo "Branch master (at 776bc9bdfc07be2b6994846ca0a89cad34c92f51) deployed as release 20160906091953 by webonise" >> /home/webonise/capistranoAssignment/myapp/revisions.log on 127.0.0.1
+ DEBUG [42bf15ae] Command: cd /home/webonise/capistranoAssignment/myapp/releases && /usr/bin/env echo "Branch master (at 776bc9bdfc07be2b6994846ca0a89cad34c92f51) deployed as release 20160906091953 by webonise" >> /home/webonise/capistranoAssignment/myapp/revisions.log
+  INFO [42bf15ae] Finished in 0.007 seconds with exit status 0 (successful).
